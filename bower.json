@@ -1,0 +1,22 @@
+{
+  "name": "workspace",
+  "authors": [
+    "M.T. Davis <marquese.davis@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "datatables.net": "^1.10.11",
+    "datatables.net-bs": "^1.10.11"
+  }
+}

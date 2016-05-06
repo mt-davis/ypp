@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+
+<section class="content-header">
+        <h1>
+          Current Client Listing
+          <small>Optional description</small>
+        </h1>
+        <ol class="breadcrumb">
+          <li><a <%= link_to " Show All Clients", clients_path, class: "fa fa-dashboard"  %></li>
+          <li class="active">Showing Current Client</li>
+        </ol>
+      </section>
+    
+<br>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @client.firstName %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @client.lastName %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @client.gender.gender if @client.gender %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @client.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @client.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @client.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @client.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @client.state %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @client.zipcode %>
+</p>
+
+
+<%= link_to "Write a note", new_client_note_path(@client), class: "btn btn-primary" %>
+
+<br>
+<br>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

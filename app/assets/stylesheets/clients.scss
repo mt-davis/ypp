@@ -1,0 +1,15 @@
+// Place all the styles related to the Clients controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.clientname {
+    width: 25% !Important;
+    
+}
+
+input:focus { 
+    background-color: lightblue;
+}
+
+.btn btn-info dropdown-toggle {
+    background-color: white !Important;
+}

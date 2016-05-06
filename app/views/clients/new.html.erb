@@ -1,0 +1,17 @@
+
+        <section class="content-header">
+        <h1>
+          Client Listing
+          <small>Optional description</small>
+        </h1>
+        <ol class="breadcrumb">
+          <li><a <%= link_to " Show All Clients", clients_path, class: "fa fa-dashboard"  %></li>
+          <li class="active">New Client</li>
+        </ol>
+      </section>
+    
+<br>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', clients_path %>
