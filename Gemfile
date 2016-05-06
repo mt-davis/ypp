@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'adminlte2-rails'
 #gem 'bootstrap-wysihtml5-rails', github: 'nerian/bootstrap-wysihtml5-rails'
 gem 'jquery-slimscroll-rails'
-gem "ckeditor"
+#gem "ckeditor"
 gem 'devise'
 
 # Use jquery as the JavaScript library
