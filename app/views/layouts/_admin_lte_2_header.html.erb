@@ -113,7 +113,7 @@
           <!-- Menu Toggle Button -->
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <!-- The user image in the navbar-->
-            <img src="/assets/boxed-bg.png" class="user-image" alt="User Image"/>
+            <%= image_tag "avatar-small.png", class:"img-circle", :alt=> "User Image" %>
             <!-- hidden-xs hides the username on small devices so only the image appears. -->
             <%= current_user.first_name %> <%= current_user.last_name %><span class:"hidden-xs"></span>
           </a>
