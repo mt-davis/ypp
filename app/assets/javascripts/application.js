@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require jquery.slimscroll
 //= require app
+//= require datatables.net/js/jquery.dataTables.min
 //= require_tree .
 
 
