@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
   before_action :set_client
+  before_action :authenticate_user!
 
   # GET /notes
   # GET /notes.json
@@ -26,6 +27,7 @@ class NotesController < ApplicationController
   # POST /notes.json
   def create
     @note = Note.new(note_params)
+    @note.user_id = current_user.id #This like added the current user ID into the user_id filed in when a note is created.
     @note.client_id = @client.id
 
     respond_to do |format|
@@ -65,16 +67,16 @@ class NotesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_note
-      @note = Note.find(params[:id])
-    end
-    
     def set_client
       @client = Client.find(params[:client_id])
     end
+    
+   # def set_client
+    #  @client = Client.find(params[:client_id])
+    #end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:title, :body)
+      params.require(:note).permit(:comment)
     end
 end

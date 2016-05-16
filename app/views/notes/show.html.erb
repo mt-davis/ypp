@@ -1,14 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @note.title %>
+  <strong>Comment:</strong>
+  <%= @note.comment %>
 </p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @note.body %>
-</p>
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+<%= link_to "Write A Note", new_client_note_path(@client), class: "btn btn-primary" %>
+<%= link_to 'Edit', edit_note_path(@note) class: "btn btn-primary" %> |
+<%= link_to 'Back', notes_path, class: "btn btn-primary" %>

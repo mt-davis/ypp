@@ -12,7 +12,7 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
-    @notes = Note.where(client_id: @client.id) #Where a note belong to the current account
+  @notes = Note.where(client_id: @client.id) #Where a note belong to the current account
   end
 
   # GET /clients/new
@@ -72,6 +72,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:firstName, :lastName, :gender_id, :email, :phone, :address, :city, :state, :zipcode)
+      params.require(:client).permit(:firstName, :lastName, :dob, :gender_id, :email, :phone, :address, :city, :state, :zipcode)
     end
 end

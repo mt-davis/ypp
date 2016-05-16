@@ -15,8 +15,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery.slimscroll
+//= require ckeditor/init
 //= require app
-//= require datatables.net/js/jquery.dataTables.min
 //= require_tree .
 
 
