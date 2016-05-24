@@ -60,7 +60,7 @@
         <td><%= client.phone %></td>
         <td><%= client.address %></td>
         <td><%= client.city %></td>
-        <td><%= client.state %></td>
+        <td><%= client.state.name if client.state %></td>
         <td><%= client.zipcode %></td>
         <td><%= link_to 'Show', client %></td>
         <td><%= link_to 'Edit', edit_client_path(client) %></td>

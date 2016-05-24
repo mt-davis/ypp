@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rsources</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rsources.each do |rsource| %>
+      <tr>
+        <td><%= rsource.name %></td>
+        <td><%= link_to 'Show', rsource %></td>
+        <td><%= link_to 'Edit', edit_rsource_path(rsource) %></td>
+        <td><%= link_to 'Destroy', rsource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rsource', new_rsource_path %>

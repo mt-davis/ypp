@@ -69,7 +69,12 @@
   </div>
     </div>
   <div class="col-md-4">
-    .col-md-4
+    <div class="form-group">
+    <div class="clienthead text-muted">
+      <h2>Referral Information</h2>
+    </div>
+    <%= f.collection_select :rsource_id, Rsource.all, :id, :name, {prompt: "Referral Source"}, class: "btn btn-info" %>
+  </div>
     </div>
 </div>
   
