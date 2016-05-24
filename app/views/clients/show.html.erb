@@ -1,8 +1,8 @@
     <p id="notice"><%= notice %></p>
 <section class="content-header">
         <h1>
-          Current Client Listing
-          <small>Optional description</small>
+          <%= @client.firstName %> <%=@client.lastName %>
+          <small>Client Listing</small>
         </h1>
         <ol class="breadcrumb">
           <li><a <%= link_to " Show All Clients", clients_path, class: "fa fa-dashboard"  %></li>
@@ -13,17 +13,7 @@
 <br>
 <div class="row">
   <div class="col-md-3">
-<p>
-  <strong>Firstname:</strong>
-  <%= @client.firstName %>
-</p>
 
-<p>
-  <strong>Lastname:</strong>
-  <%= @client.lastName %>
-</p>
-
-<p>
   <strong>Gender:</strong>
   <%= @client.gender.gender if @client.gender %>
 </p>
