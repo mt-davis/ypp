@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cnotes
   resources :rsources
   resources :states
   resources :notes

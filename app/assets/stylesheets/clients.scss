@@ -1,6 +1,13 @@
 // Place all the styles related to the Clients controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+fieldset {
+  border: 1px solid #cecfd5;
+  border-radius: 6px;
+  padding: 24px 30px;
+}
+
 .clientname {
     width: 25% !Important;
     

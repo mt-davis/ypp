@@ -10,22 +10,23 @@
       </ul>
     </div>
   <% end %>
-  
+<form id=clientform>  
 <div class="row">
+  <!-- Pesonal Information -->
   <div class="col-md-4">
-    <div class="clienthead text-muted">
-      <h2>Client Name</h2>
-    </div>
+    <fieldset>
+      <legend>Personal Information</legend>
+   
     <div class="clientname">
-    <%= f.label:firstName, class: "hidden" %><br>
+    <%= f.label:firstName, class: "hidden" %><br/>
     <%= f.text_field :firstName, class: "form-control", placeholder: "First Name"  %>
   </div>
   <div class="clientname">
-    <%= f.label :lastName, class: "hidden" %><br>
+    <%= f.label :lastName, class: "hidden" %><br/>
     <%= f.text_field :lastName, class: "form-control", placeholder: "LastName" %>
     </div>
     <div class="form-group">
-    <%= f.label :gender_id, class: "hidden" %><br>
+    <%= f.label :gender_id, class: "hidden" %><br/>
     <%= f.collection_select :gender_id, Gender.all, :id, :gender, {prompt: "Choose a Gender"}, class: "btn btn-info" %>
   </div>
   <div class="form-group">
@@ -35,7 +36,7 @@
   </div>
   <div class="form-group">
     <div class="clientemail">
-    <%= f.label :email, class: "hidden" %><br>
+    <%= f.label :email, class: "hidden" %><br/>
     <%= f.text_field :email, class: "form-control", placeholder: "Email Address" %>
   </div>
   </div>
@@ -46,21 +47,23 @@
   </div>
   </div>
   </div>
+  </fieldset>
+  <!-- End of personal information -->
     </div>
   <div class="col-md-4">
-    <div class="clienthead text-muted">
-      <h2>Client Address</h2>
-    </div>
+    <!-- Client Aaddress -->
+    <fieldset>
+      <legend>Client Address</legend>
     <div class="clientaddress">
-    <%= f.label :address, class: "hidden" %><br>
+    <%= f.label :address, class: "hidden" %><br/>
     <%= f.text_field :address, class: "form-control", placeholder: "Address" %>
   </div>
   <div class="clientcity">
-    <%= f.label :city, class: "hidden" %><br>
+    <%= f.label :city, class: "hidden" %><br/>
     <%= f.text_field :city, class: "form-control", placeholder: "City" %>
   </div>
   <div class="form-group">
-    <%= f.label :state_id, class: "hidden" %><br>
+    <%= f.label :state_id, class: "hidden" %><br/>
     <%= f.collection_select :state_id, State.all, :id, :name, {prompt: "Choose State"}, class: "btn btn-info" %>
   </div>
   <div class="clientzip">
@@ -68,16 +71,20 @@
     <%= f.text_field :zipcode, class: "form-control", placeholder: "Zipcode" %>
   </div>
     </div>
+    </fieldset>
+    <!-- End of client address -->
   <div class="col-md-4">
     <div class="form-group">
-    <div class="clienthead text-muted">
-      <h2>Referral Information</h2>
-    </div>
+    <fieldset>
+      <legend>Referral Source</legend>
     <%= f.collection_select :rsource_id, Rsource.all, :id, :name, {prompt: "Referral Source"}, class: "btn btn-info" %>
   </div>
     </div>
+    </fieldset>
+    <!-- Referral Information -->
 </div>
-  
+</form>
+<br/>
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>
     <%= link_to 'Cancel', clients_path, class: "btn btn-danger" %>

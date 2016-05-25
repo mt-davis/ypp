@@ -19,3 +19,16 @@
 @import "AdminLTE/AdminLTE";
 @import "AdminLTE/skins/skin-blue";
 
+fieldset {
+  border: 1px solid #cecfd5;
+  border-radius: 6px;
+  padding: 24px 30px;
+  padding-top: 1px;
+}
+
+legend {
+     padding-left: 2px  !Important;
+     padding-right: 2px !Important;
+     width: inherit !Important;
+     border-bottom: 0px !Important;
+}
