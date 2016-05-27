@@ -1,5 +1,5 @@
-<%= form_for(@client) do |f| %>
-  <% if @client.errors.any? %>
+<%=form_for(@client, html: {class: "pure-form pure-form-stacked"}) do |f| %>
+     <% if @client.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
 
@@ -10,83 +10,54 @@
       </ul>
     </div>
   <% end %>
-<form id=clientform>  
-<div class="row">
-  <!-- Pesonal Information -->
-  <div class="col-md-4">
-    
-    <fieldset>
-      <legend>Personal Information</legend>
-   
-      <label for="client">
-    <span><%= f.label:firstName, class: "hidden" %></span>
-    <%= f.text_field :firstName, class: "form-control", placeholder: "First Name", class: "input" %>
-    </label>
-  
-    <label for="client">
-    <span class="sclient"><%= f.label :lastName, class: "hidden" %></span>
-    <%= f.text_field :lastName, class: "form-control", placeholder: "LastName", class: "input" %>
-    </label>
-  
-    <div class="form-group">
-    <%= f.label :gender_id, class: "hidden" %><br/>
-    <%= f.collection_select :gender_id, Gender.all, :id, :gender, {prompt: "Choose a Gender"}, class: "btn btn-info" %>
-  </div>
-  <div class="form-group">
-  <div class="clientdob">
-    <%= f.label :dob, "Date of Birth" %>
-    <%= f.date_field :dob, class: "form-control", class: "glyphicon glyphicon-calendar" %><br/>
-  </div>
-  <br/>
-  <div class="form-group">
-    <div class="clientemail">
-      <label for="client">
-    <span class="sclient"><%= f.label :email, class: "hidden" %></span>
-    <%= f.email_field :email, class: "form-control", placeholder: "Email Address", class: "input" %>
-    </label>
-  </div>
-  </div>
-  <div class="form-group">
-    <div class="clientphone">
-      <label for="client">
-    <span class="sclient"><%= f.label :phone, class: "hidden" %></span>
-    <%= f.text_field :phone, class: "form-control", placeholder: "Phone Number", class: "input" %>
-    </label>
-  </div>
-  <label for="client">
-    <span class="sclient"><%= f.label :address, class: "hidden" %></span>
-    <%= f.text_field :address, class: "form-control", placeholder: "Address", class: "input" %>
-  </label>
-  <label for="client">
-    <span class="sclient"><%= f.label :city, class: "hidden" %></span>
-    <%= f.text_field :city, class: "form-control", placeholder: "City", class: "input"  %>
-  </label>
-  <label for="client">
-   <span class="sclient"><%= f.label :state_id, class: "hidden" %></span>
-    <%= f.collection_select :state_id, State.all, :id, :name, {prompt: "Choose State"}, class: "btn btn-info" %>
-  </label>
-  <label for="client">
-    <span class="sclient"><%= f.label :zipcode, class: "hidden" %></span>
-    <%= f.text_field :zipcode, class: "form-control", placeholder: "Zipcode" %>
-    </label>
-  </div>
-  </fieldset>
-  <!-- End of personal information -->
-    </div>
-
-  <div class="col-md-4">
-    <div class="form-group">
-    <fieldset>
-      <legend>Referral Source</legend>
-    <%= f.collection_select :rsource_id, Rsource.all, :id, :name, {prompt: "Referral Source"}, class: "btn btn-info" %>
-  </div>
-    </div>
-    </fieldset>
-    <!-- Referral Information -->
-</div>
-</form>
-<br/>
-   <div class="actions">
-    <%= f.submit class: "btn btn-primary" %>
-  </div>
-<% end %>
+            <!-- beginning of rails code -->
+            <form class="pure-form pure-form-stacked">
+                <fieldset>
+                    <legend>Legend</legend>
+                    <div class="pure-g">
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <%= f.label:firstName %>
+                            <%= f.text_field :firstName, class:"pure-u-23-24", type:"text"%>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-3">
+                             <%= f.label :lastName %>
+                             <%= f.text_field :lastName, class:"pure-u-23-24", type:"text" %>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <%= f.label :email %>
+                                <%= f.text_field :email, class:"pure-u-23-24", type:"text", required: true %>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <%= f.label :phone %>
+                                <%= f.text_field :phone %>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <%= f.label :gender_id %>
+                                <%= f.collection_select :gender_id, Gender.all, :id, :gender, {prompt: "Choose a Gender"}, class: "btn btn-info" %>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <%= f.label :dob, "Date of Birth" %>
+                                <%= f.date_field :dob %>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <%= f.label :address %>
+                                <%= f.text_field :address, placeholder: "Address" %>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <%= f.label :city %>
+                                <%= f.text_field :city, placeholder: "City" %>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <%= f.label :state_id %>
+                                <%= f.collection_select :state_id, State.all, :id, :name, {prompt: "Choose State"}, class: "btn btn-info" %>
+                                <%= f.label :zipcode %>
+                                <%= f.text_field :zipcode, class: "form-control", class:"pure-u-5-24", type:"text", placeholder: "Zipcode" %>
+                            </div>
+                    </div>
+                </fieldset>
+            
+                <div class="actions">
+                <%=f .submit class: "btn btn-primary" %>
+            </div>
+         <% end %>
+         </form>
