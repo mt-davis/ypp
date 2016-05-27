@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  *= require datatables.net-bs/css/dataTables.bootstrap.min
+ *= require css/pure-min.css
+ *= require css/grids-responsive-min.css
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -21,7 +23,13 @@
 
 /* Custom css client form*/
 
-fieldset {
+.btn-info {
+    
+    background-color: #0078E7 !Important;
+    font-color: white !Important;
+}
+
+/*fieldset {
   border: 1px solid #cecfd5;
   border-radius: 6px;
   padding: 24px 30px;

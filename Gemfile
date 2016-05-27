@@ -18,7 +18,6 @@ gem 'adminlte2-rails'
 gem 'jquery-slimscroll-rails'
 gem "ckeditor"
 gem 'devise'
-
 # Use jquery as the JavaScript library
 #gem 'jquery-rails'
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
