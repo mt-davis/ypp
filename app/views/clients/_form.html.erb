@@ -13,47 +13,54 @@
             <!-- beginning of rails code -->
             <form class="pure-form pure-form-stacked">
                 <fieldset>
-                    <legend>Legend</legend>
+                    <legend>Client Information</legend>
                     <div class="pure-g">
-                        <div class="pure-u-1 pure-u-md-1-3">
-                            <%= f.label:firstName %>
-                            <%= f.text_field :firstName, class:"pure-u-23-24", type:"text"%>
+                        <div class="pure-u-1 pure-u-md-1-3 firstname">
+                            <%= f.label:firstName, "First Name" %>
+                            <%= f.text_field :firstName, class:"pure-u-2-5", type:"text", placeholder: "First Name",  required: true %>
                         </div>
-                        <div class="pure-u-1 pure-u-md-1-3">
-                             <%= f.label :lastName %>
-                             <%= f.text_field :lastName, class:"pure-u-23-24", type:"text" %>
+                        <div class="pure-u-1 pure-u-md-1-3 lastname">
+                             <%= f.label :lastName, "Last Name" %>
+                             <%= f.text_field :lastName, class:"pure-u-2-5", type:"text", placeholder: "Last Name" %>
                             </div>
-                            <div class="pure-u-1 pure-u-md-1-3">
-                                <%= f.label :email %>
-                                <%= f.text_field :email, class:"pure-u-23-24", type:"text", required: true %>
+                            <div class="pure-u-1 pure-u-md-1-3 email">
+                                <%= f.label :email, "Email" %>
+                                <%= f.text_field :email, class:"pure-u-3-5", type:"text", placeholder: "example@example.com" %>
                             </div>
-                            <div class="pure-u-1 pure-u-md-1-3">
-                                <%= f.label :phone %>
-                                <%= f.text_field :phone %>
+                            <div class="pure-u-1 pure-u-md-1-3 phone">
+                                <%= f.label :phone, "Phone" %>
+                                <%= f.text_field :phone, placeholder: "203-000-0000" %>
                             </div>
-                            <div class="pure-u-1 pure-u-md-1-3">
-                                <%= f.label :gender_id %>
-                                <%= f.collection_select :gender_id, Gender.all, :id, :gender, {prompt: "Choose a Gender"}, class: "btn btn-info" %>
+                            <div class="pure-u-1 pure-u-md-1-3 gender">
+                                <%= f.label :gender_id, "Gender" %>
+                                <%= f.collection_select :gender_id, Gender.all, :id, :gender, {prompt: "Choose a Gender"}, class: "btn btn-info", class: "pure-input-4-24" %>
                             </div>
-                            <div class="pure-u-1 pure-u-md-1-3">
+                            <div class="pure-u-1 pure-u-md-1-3 dob">
                                 <%= f.label :dob, "Date of Birth" %>
                                 <%= f.date_field :dob %>
                             </div>
-                            <div class="pure-u-1 pure-u-md-1-3">
-                                <%= f.label :address %>
+                            <div class="pure-u-1 pure-u-md-1-3 address">
+                                <%= f.label :address, "Address" %>
                                 <%= f.text_field :address, placeholder: "Address" %>
                             </div>
-                            <div class="pure-u-1 pure-u-md-1-3">
-                                <%= f.label :city %>
+                            <div class="pure-u-1 pure-u-md-1-3 city">
+                                <%= f.label :city, "City" %>
                                 <%= f.text_field :city, placeholder: "City" %>
                             </div>
-                            <div class="pure-u-1 pure-u-md-1-3">
-                                <%= f.label :state_id %>
-                                <%= f.collection_select :state_id, State.all, :id, :name, {prompt: "Choose State"}, class: "btn btn-info" %>
-                                <%= f.label :zipcode %>
+                            <div class="pure-u-1 pure-u-md-1-3 state">
+                                <%= f.label :state_id, "State" %>
+                                <%= f.collection_select :state_id, State.all, :id, :name, {prompt: "Choose State"}, class: "btn btn-info", class: "pure-input-4-24" %>
+                                <%= f.label :zipcode, "Zipcode" %>
                                 <%= f.text_field :zipcode, class: "form-control", class:"pure-u-5-24", type:"text", placeholder: "Zipcode" %>
                             </div>
                     </div>
+                     <legend>Resources</legend>
+                    <div class="pure-g">
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <%= f.label :rsource_id, "Resource" %>
+                            <%= f.collection_select :rsource_id, Rsource.all, :id, :name, {prompt: "Choose a Resource"}, class: "btn btn-info", class: "pure-input-4-24" %>
+                        </div>
+                        </div>
                 </fieldset>
                 <div class="actions">
                 <%=f .submit class: "btn btn-primary" %>
