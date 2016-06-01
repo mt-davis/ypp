@@ -11,12 +11,13 @@
 // about supported directives.
 //
 //= require jquery
-//= require turbolinks
-//= require bootstrap-sprockets
+//= require jquery.turbolinks
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require jquery.slimscroll
 //= require ckeditor/init
 //= require app
+//= require turbolinks
 //= require_tree .
 
 
