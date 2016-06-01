@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/tachyons/adminlte2-rails.git
+  remote: git://github.com/mt-davis/adminlte2-rails.git
   revision: f428c323e0c865d0a41a35f43fe606cff575fe05
   specs:
     adminlte2-rails (0.0.6)
