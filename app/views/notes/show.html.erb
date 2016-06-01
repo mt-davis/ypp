@@ -2,7 +2,7 @@
 
 <p>
   <strong>Comment:</strong>
-  <%= @note.comment %>
+  <%= raw @note.comment %>
 </p>
 
 <%= link_to "Write A Note", new_client_note_path(@client), class: "btn btn-primary" %>

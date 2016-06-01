@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-    <% @notes.each do |note| %>
+    <% raw @notes.each do |note| %>
       <tr>
         <td><%= note.title %></td>
         <td><%= note.body %></td>

@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/galetahub/ckeditor.git
+  revision: 64d85e5cfb5a5ff494157e4e6222fae167778130
+  specs:
+    ckeditor (4.1.6)
+      cocaine
+      orm_adapter (~> 0.5.0)
+
+GIT
   remote: git://github.com/mt-davis/adminlte2-rails.git
   revision: f428c323e0c865d0a41a35f43fe606cff575fe05
   specs:
@@ -54,9 +62,6 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.3)
-    ckeditor (4.1.6)
-      cocaine
-      orm_adapter (~> 0.5.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -183,7 +188,7 @@ PLATFORMS
 DEPENDENCIES
   adminlte2-rails!
   byebug
-  ckeditor
+  ckeditor!
   coffee-rails (~> 4.1.0)
   devise
   jbuilder (~> 2.0)

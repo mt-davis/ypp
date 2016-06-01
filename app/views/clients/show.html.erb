@@ -62,7 +62,7 @@
 <h3> No Notes for Account</h3>
 <% else %>
 <% @notes.each do |note| %>
-<p><%= h(note.comment).gsub(/\n/, '<br/>').html_safe %></p>
+<p><%= h(raw note.comment).gsub(/\n/, '<br/>').html_safe %></p>
 <% end %>
 <% end %>
 
