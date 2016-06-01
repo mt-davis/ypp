@@ -13,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'adminlte2-rails'
+gem 'adminlte2-rails', :git => 'git://github.com/mt-davis/adminlte2-rails.git'
 #gem 'bootstrap-wysihtml5-rails', github: 'nerian/bootstrap-wysihtml5-rails'
 gem 'jquery-slimscroll-rails'
 gem "ckeditor"
