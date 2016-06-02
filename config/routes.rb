@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :races
   resources :employments
   resources :rsources
   resources :states

@@ -4,4 +4,6 @@ class Client < ActiveRecord::Base
     has_many   :notes
     belongs_to :state
     belongs_to :rsource
+    belongs_to :employment
+    belongs_to :race
 end
