@@ -78,4 +78,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   # Required for Devise gem
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.assets.precompile += ['ckeditor/skins/kama/editor.css', 'ckeditor/lang/fr.js', 'ckeditor/skins/kama/editor.css']
 end
