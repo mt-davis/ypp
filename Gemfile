@@ -20,6 +20,9 @@ gem 'jquery-slimscroll-rails'
 gem 'ckeditor'
 gem 'devise'
 gem 'jquery-turbolinks'
+gem 'carrierwave'
+gem "fog-aws"
+gem "figaro"
 # Use jquery as the JavaScript library
 #gem 'jquery-rails'
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
