@@ -6,4 +6,5 @@ class Client < ActiveRecord::Base
     belongs_to :rsource
     belongs_to :employment
     belongs_to :race
+    belongs_to :insurance
 end
