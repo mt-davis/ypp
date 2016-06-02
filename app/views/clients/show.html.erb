@@ -13,9 +13,9 @@
 <br>
 <div class="row">
   <div class="col-md-3">
-    
-    <%= image_tag @client.image_url %>
-
+    <div><%= image_tag @client.image_url %></div>
+    <h2><%= @client.firstName %> <%=@client.lastName %></h2>
+<p>
   <strong>Gender:</strong>
   <%= @client.gender.gender if @client.gender %>
 </p>

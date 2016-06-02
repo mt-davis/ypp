@@ -23,6 +23,7 @@ gem 'jquery-turbolinks'
 gem 'carrierwave'
 gem "fog-aws"
 gem "figaro"
+gem "mini_magick"
 # Use jquery as the JavaScript library
 #gem 'jquery-rails'
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
