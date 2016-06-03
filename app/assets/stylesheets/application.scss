@@ -28,30 +28,19 @@
     background-color: #0078E7 !Important;
     font-color: white !Important;
 }
-/*fieldset {
-  border: 1px solid #cecfd5;
-  border-radius: 6px;
-  padding: 24px 30px;
-  padding-top: 1px;
-  background-color: #C1DEEF;
-}
 
-legend {
-     padding-left: 2px  !Important;
-     padding-right: 2px !Important;
-     width: inherit !Important;
-     border-bottom: 0px !Important;
-     background-color: #ABD0FF;
-     border-radius: 15px 50px 30px;
-}
+/* client image*/
+.image-client {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	}
+/*  end of client image*/	
 
-.clientname {
-    margin:0;
-    padding:0;
-}
-
-.clientname { width: 200px; float: left; margin: 0 20px 0 0; }
-.sclient { display: block; margin: 0 0 3px; font-size: 1.2em; font-weight: bold; }
-.input { width: 200px; border: 1px solid #000; padding: 5px; }
 
 /*end of custom css for client form*/

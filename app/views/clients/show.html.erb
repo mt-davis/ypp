@@ -1,7 +1,7 @@
     <p id="notice"><%= notice %></p>
 <section class="content-header">
         <h1>
-          <%= @client.firstName %> <%=@client.lastName %>
+          Edit Client
           <small>Client Listing</small>
         </h1>
         <ol class="breadcrumb">
@@ -11,9 +11,10 @@
       </section>
     
 <br>
+<div class="well">
 <div class="row">
   <div class="col-md-3">
-    <div><%= image_tag @client.image_url %></div>
+    <div><%= image_tag @client.image_url, class: "image-client" %></div>
     <h2><%= @client.firstName %> <%=@client.lastName %></h2>
 <p>
   <strong>Gender:</strong>
@@ -56,6 +57,7 @@
 </p>
 
 
+
 <%= link_to "Write a note", new_client_note_path(@client), class: "btn btn-primary" %>
 
   </div>
@@ -76,3 +78,6 @@
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>
+</div>
+</div>
+</div>
