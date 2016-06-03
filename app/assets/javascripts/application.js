@@ -17,6 +17,7 @@
 //= require jquery.slimscroll
 //= require ckeditor/init
 //= require app
+//= require js/bootstrap-switch
 //= require turbolinks
 //= require_tree .
 
