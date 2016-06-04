@@ -17,7 +17,7 @@ gem 'adminlte2-rails', :git => 'git://github.com/mt-davis/adminlte2-rails.git'
 #gem 'bootstrap-wysihtml5-rails', github: 'nerian/bootstrap-wysihtml5-rails'
 gem 'jquery-slimscroll-rails'
 
-#gem 'ckeditor'
+gem 'ckeditor'
 gem 'devise'
 gem 'jquery-turbolinks'
 gem 'carrierwave'
