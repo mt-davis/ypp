@@ -15,7 +15,6 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require jquery.slimscroll
-//= require ckeditor/init
 //= require app
 //= require js/bootstrap-switch
 //= require turbolinks
