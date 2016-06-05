@@ -7,6 +7,7 @@ class ClientsController < ApplicationController
   # GET /clients.json
   def index
     @clients = Client.all.uniq.order("created_at DESC")
+    @clients_count = Client.uniq.count
   end
 
   # GET /clients/1
