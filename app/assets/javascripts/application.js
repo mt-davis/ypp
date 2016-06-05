@@ -17,6 +17,7 @@
 //= require jquery.slimscroll
 //= require app
 //= require js/bootstrap-switch
+//= require js/icheck
 //= require turbolinks
 //= require_tree .
 

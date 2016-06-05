@@ -44,8 +44,10 @@ class ClientsController < ApplicationController
   # PATCH/PUT /clients/1
   # PATCH/PUT /clients/1.json
   def update
-    @client.remove_image!
+    #if params[:remove_image]
+    #@client.remove_image!
     @client.save
+  #end
     respond_to do |format|
       if @client.update(client_params)
         format.html { redirect_to @client, notice: 'Client was successfully updated.' }
@@ -56,7 +58,6 @@ class ClientsController < ApplicationController
       end
     end
   end
-
   # DELETE /clients/1
   # DELETE /clients/1.json
   def destroy
@@ -75,6 +76,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:firstName, :lastName, :dob, :gender_id, :insurance_id, :state_id, :rsource_id, :image, :race_id, :employment_id, :comments, :email, :phone, :address, :city, :state, :zipcode)
+      params.require(:client).permit(:firstName, :lastName, :dob, :gender_id, :remove_image, :insurance_id, :state_id, :rsource_id, :image, :race_id, :employment_id, :comments, :email, :phone, :address, :city, :state, :zipcode)
     end
 end
