@@ -25,6 +25,11 @@
 
 /* Custom css client form*/
 
+
+.pure-g {
+	padding-left: 50px;
+}
+
 .btn-info {
     
     background-color: #0078E7 !Important;
@@ -48,4 +53,45 @@ p#notice {
     display: none;
 }
 
+
+/* client form */
+
+h2 {
+	background-color: #dedede;
+	border-bottom: 1px solid #d4d4d4;
+	border-top: 1px solid #d4d4d4;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px #ccc;
+	color: #fff;
+	font-size: 1.1em;
+	margin: 12px;
+	padding: 0.3em 1em;
+	text-shadow: #9fbeb9 1px 1px 1px;
+	text-transform: uppercase;
+}
+
+.account {
+	background-color: #0B5586;
+}
+
+.employment {
+	background-color: #4494C9;
+}
+
+.refferal {
+	background-color: #377D87;
+}
+
+.notes {
+	background-color: #4494C9;
+}
+
+fieldset {
+	background-color: #f1f1f1;
+	border: none;
+	border-radius: 2px;
+	margin-bottom: 12px;
+	overflow: hidden;
+	padding: 0 10px;
+}
 /*end of custom css for client form*/

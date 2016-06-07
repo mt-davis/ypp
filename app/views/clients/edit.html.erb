@@ -1,3 +1,11 @@
-<h1>Editing: <em><%= @client.firstName %> <%=@client.lastName %></em></h1>
+      <section class="content-header">
+        <h1>Editing: <em><%= @client.firstName %> <%=@client.lastName %></em></h1>
+        <ol class="breadcrumb">
+          <li><a href="/"><i class="fa fa-road"></i>Home Page</a></li>
+          <li class="active"><%= @client.firstName %> <%=@client.lastName %></li>
+        </ol>
+      </section>
+    
+<br>
 
 <%= render 'form' %>

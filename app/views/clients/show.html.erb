@@ -1,12 +1,12 @@
     <p id="notice"><%= notice %></p>
 <section class="content-header">
         <h1>
-          Edit Client
-          <small>Client Listing</small>
+          Current Client
+          <small><%= @client.firstName %> <%=@client.lastName %></small>
         </h1>
         <ol class="breadcrumb">
           <li><a <%= link_to " Show All Clients", clients_path, class: "fa fa-road"  %></li>
-          <li class="active">Showing Current Client</li>
+          <li class="active"><%= @client.firstName %> <%=@client.lastName %></li>
         </ol>
       </section>
     
@@ -15,7 +15,7 @@
 <div class="row">
   <div class="col-md-3">
     <div><%= image_tag @client.image_url, class: "image-client" %></div>
-    <h2><%= @client.firstName %> <%=@client.lastName %></h2>
+    <h1 class="first-name"><%= @client.firstName %> <%=@client.lastName %></h1>
 <p>
   <strong>Gender:</strong>
   <%= @client.gender.gender if @client.gender %>
