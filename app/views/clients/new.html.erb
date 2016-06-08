@@ -2,7 +2,7 @@
         <section class="content-header">
         <h1>
           Client Enrollment Form
-          <small>Optional description</small>
+          <small>created by <%= current_user.first_name %> <%= current_user.last_name %></small>
         </h1>
         <ol class="breadcrumb">
           <li><a <%= link_to " Show All Clients", clients_path, class: "fa fa-dashboard"  %></li>

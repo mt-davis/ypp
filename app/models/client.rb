@@ -8,4 +8,8 @@ class Client < ActiveRecord::Base
     belongs_to :employment
     belongs_to :race
     belongs_to :insurance
+    
+    validates :firstName, :lastName, presence: true
+    validates :phone, format: { with: /\A\(\d{3}\) \d{3}-\d{4}\z/,
+    message: "must be in the format (123) 456-7890" }
 end

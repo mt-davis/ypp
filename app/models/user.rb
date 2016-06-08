@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
          has_many :notes # To delete notes when user is deleted replace with "has_many : notes, dependent: :destroy"
+         
+         validates :first_name, :last_name, presence: true
 end
