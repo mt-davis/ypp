@@ -1,111 +1,107 @@
-<%=form_for(@client, html: {class: "pure-form pure-form-stacked", multipart:true}) do |f| %>
-     <% if @client.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
-
-      <ul>
-      <% @client.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-            <!-- beginning of rails code -->
-            <form class="pure-form pure-form-stacked">
-                <fieldset>
-                    <!-- <legend>Client Information</legend> -->
-                    <div>
-                    <h2 class="account">Client Information</h2>
-                    </div>
-                    <div class="pure-g">
-                        <div class="pure-u-1 pure-u-md-1-3">
-                            <%= image_tag @client.image_url, class: "image-client" if @client.image? %>
-                            <%= f.label :image, "Client Image" %>
-                            <%= f.file_field :image %>
-                            <%= f.check_box :remove_image, id: "my-checkbox", :data => { :size=>'mini', 'on-color'=>'success', 'on-text'=>'Done', 'off-text'=>'Yes' } %> Remove Image?
-                        </div>
-
-                        <div class="pure-u-1 pure-u-md-1-3 firstname">
-                            <%= f.label:firstName, "First Name" %>
-                            <%= f.text_field :firstName, class:"pure-u-2-5", type:"text", placeholder: "First Name",  required: true %>
-                        
-                             <%= f.label :lastName, "Last Name" %>
-                             <%= f.text_field :lastName, class:"pure-u-2-5", type:"text", placeholder: "Last Name" %>
-                            </div>
-                            <div class="pure-u-1 pure-u-md-1-3 email">
-                                <%= f.label :email, "Email" %>
-                                <%= f.text_field :email, class:"pure-u-3-5", type:"text", placeholder: "example@example.com" %>
-
-                                <%= f.label :phone, "Phone" %>
-                                <%= f.text_field :phone, placeholder: "123 456-7890" %>
-                            </div>
-                            <div class="pure-u-1 pure-u-md-1-3 gender">
-                                <%= f.label :gender_id, "Gender" %>
-                                <%= f.collection_select :gender_id, Gender.all, :id, :gender, {prompt: "Choose a Gender"}, class: "btn btn-info", class: "pure-input-4-24" %>
-                            </div>
-                            <div class="pure-u-1 pure-u-md-1-3 gender">
-                                <%= f.label :race_id, "Race" %>
-                                <%= f.collection_select :race_id, Race.all, :id, :name, {prompt: "Choose a Race"}, class: "btn btn-info", class: "pure-input-4-24" %>
-                            </div>
-                            <div class="pure-u-1 pure-u-md-1-3 dob">
-                                <%= f.label :dob, "Date of Birth" %>
-                                <%= f.date_field :dob, class:"fa fa-calendar" %>
-                            </div>
-                            <div class="pure-u-1 pure-u-md-1-3 address">
-                                <%= f.label :address, "Address" %>
-                                <%= f.text_field :address, placeholder: "Address" %>
-                            </div>
-                            <div class="pure-u-1 pure-u-md-1-3 city">
-                                <%= f.label :city, "City" %>
-                                <%= f.text_field :city, placeholder: "City" %>
-                            </div>
-                            <div class="pure-u-1 pure-u-md-1-3 state">
-                                <%= f.label :state_id, "State" %>
-                                <%= f.collection_select :state_id, State.all, :id, :name, {prompt: "Choose State"}, class: "btn btn-info", class: "pure-input-4-24" %>
-                            </div>
-                            <div class="pure-u-1 pure-u-md-1-3 zipcode">
-                                <%= f.label :zipcode, "Zipcode" %>
-                                <%= f.text_field :zipcode, class: "form-control", class:"pure-u-5-24", type:"text", placeholder: "Zipcode" %>
-                            </div>
-                    </div>
-                    <!-- Employment Information -->
-                    <h2 class="employment">Employment Status</h2>
-                    <div class="pure-g">
-                        <div class="pure-u-1 pure-u-md-1-3">
-                           <!-- <legend>Employment Status</legend> -->
-                            <%= f.label :employment_id, "Employment" %>
-                            <%= f.collection_select :employment_id, Employment.all, :id, :name, {prompt: "Choose Status"}, class: "btn btn-info", class: "pure-input-4-24" %>
-                        </div>
-                        <!-- End of Employment Information -->
-                        </div>
-                    <!-- Referral Information -->
-                    <h2 class="refferal">Referral / Insurance Information</h2>
-                    <div class="pure-g">
-                        <div class="pure-u-1 pure-u-md-1-3">
-                            <!--<legend>Referral / Insurance Information</legend> -->
-                            <%= f.label :rsource_id, "Resource" %>
-                            <%= f.collection_select :rsource_id, Rsource.all, :id, :name, {prompt: "Choose a Resource"}, class: "btn btn-info", class: "pure-input-4-24" %>
-                             </div>
-                        
-                            <div class="pure-u-1 pure-u-md-1-3">
-                            <%= f.label :insurance_id, "Insruance" %>
-                            <%= f.collection_select :insurance_id, Insurance.all, :id, :name, {prompt: "Choose Insurance"}, class: "btn btn-info", class: "pure-input-4-24" %>
-                        </div>
-                        </div>
-                        <!-- End of Referral Information -->
-                        
-                        <!-- Client Note -->
-                         <!-- <legend>Client Note <small>/ Account Notes Only</small></legend> -->
-                    <h2 class="notes">Account Notes</h2>
-                    <div class="pure-g">
-                        <div class="pure-u-1 pure-u-md-1-24 ">
-                            <%= f.text_area :comments, cols: "60", rows: "5" %>
-                            </div>
-                        </div>
-                        <!-- End of Client Note -->
-                </fieldset>
-                <div class="actions">
-                <%=f .submit class: "btn btn-primary" %> <%= link_to 'Cancel', clients_path, class: "btn btn-danger" %>
-            </div>
-         <% end %>
-         </form>
+    <%=form_for(@client, html: {class: "pure-form pure-form-stacked", multipart:true}) do |f| %>
+	<% if @client.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+			<ul>
+				<% @client.errors.full_messages.each do |message| %>
+					<li>
+						<%=message %>
+					</li>
+					<% end %>
+			</ul>
+		</div>
+		<% end %>
+			<!-- beginning of rails code -->
+			<form class="pure-form pure-form-stacked">
+				<fieldset>
+					<!-- <legend>Client Information</legend> -->
+					<div>
+						<h2 class="account">Client Information</h2> </div>
+					<div class="pure-g">
+						<div class="pure-u-1 pure-u-md-1-3">
+							<%=image_tag @client.image_url, class: "image-client" if @client.image? %>
+								<%=f .label :image, "Client Image" %>
+									<%=f .file_field :image %>
+										<%=f .check_box :remove_image, id: "my-checkbox", :data=> { :size=>'mini', 'on-color'=>'success', 'on-text'=>'Done', 'off-text'=>'Yes' } %> Remove Image? </div>
+						<!-- begining of client form -->
+						<div class="pure-u-1 pure-u-md-1-3 firstname">
+							<%=f .label:firstName, "First Name" %>
+								<%=f .text_field :firstName, class: "pure-u-2-5", type: "text", placeholder: "First Name", required: true %>
+									<%=f .label :lastName, "Last Name" %>
+									<%=f .text_field :lastName, class: "pure-u-2-5", type: "text", placeholder: "Last Name" %>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3 email">
+							<%=f .label :email, "Email" %>
+								<%=f .text_field :email, class: "pure-u-3-5", type: "text", placeholder: "example@example.com" %>
+									<%=f .label :phone, "Phone" %>
+										<%=f .text_field :phone, placeholder: "123 456-7890" %>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3 gender">
+							<%=f .label :gender_id, "Gender" %>
+								<%=f .collection_select :gender_id, Gender.all, :id, :gender, {prompt: "Choose a Gender"}, class: "btn btn-info", class: "pure-input-4-24" %>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3 gender">
+							<%=f .label :race_id, "Race" %>
+								<%=f .collection_select :race_id, Race.all, :id, :name, {prompt: "Choose a Race"}, class: "btn btn-info", class: "pure-input-4-24" %>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3 dob">
+							<%=f .label :dob, "Date of Birth" %>
+								<%=f .date_field :dob, class: "fa fa-calendar" %>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3 address">
+							<%=f .label :address, "Address" %>
+								<%=f .text_field :address, placeholder: "Address" %>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3 city">
+							<%=f .label :city, "City" %>
+								<%=f .text_field :city, placeholder: "City" %>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3 state">
+							<%=f .label :state_id, "State" %>
+								<%=f .collection_select :state_id, State.all, :id, :name, {prompt: "Choose State"}, class: "btn btn-info", class: "pure-input-4-24" %>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3 zipcode">
+							<%=f .label :zipcode, "Zipcode" %>
+								<%=f .text_field :zipcode, class: "form-control", class: "pure-u-5-24", type: "text", placeholder: "Zipcode" %>
+						</div>
+					</div>
+					<!-- begining of client form -->
+					<!-- Employment Information -->
+					<h2 class="employment">Employment Status</h2>
+					<div class="pure-g">
+						<div class="pure-u-1 pure-u-md-24-24">
+							<!-- <legend>Employment Status</legend> -->
+							<%= render partial: 'clients/education' %>
+						</div>
+						<!-- End of Employment Information -->
+					</div>
+					<!-- Referral Information -->
+					<h2 class="refferal">Referral / Insurance Information</h2>
+					<div class="pure-g">
+						<div class="pure-u-1 pure-u-md-1-3">
+							<!--<legend>Referral / Insurance Information</legend> -->
+							<%=f .label :rsource_id, "Resource" %>
+								<%=f .collection_select :rsource_id, Rsource.all, :id, :name, {prompt: "Choose a Resource"}, class: "btn btn-info", class: "pure-input-4-24" %>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3">
+							<%=f .label :insurance_id, "Insruance" %>
+								<%=f .collection_select :insurance_id, Insurance.all, :id, :name, {prompt: "Choose Insurance"}, class: "btn btn-info", class: "pure-input-4-24" %>
+						</div>
+					</div>
+					<!-- End of Referral Information -->
+					<!-- Client Note -->
+					<!-- <legend>Client Note <small>/ Account Notes Only</small></legend> -->
+					<h2 class="notes">Account Notes</h2>
+					<div class="pure-g">
+						<div class="pure-u-1 pure-u-md-1-24 ">
+							<%=f .text_area :comments, cols: "60", rows: "5" %>
+						</div>
+					</div>
+					<!-- End of Client Note -->
+				</fieldset>
+				<div class="actions">
+					<%=f .submit class: "btn btn-primary" %>
+						<%=link_to 'Cancel', clients_path, class: "btn btn-danger" %>
+				</div>
+				<% end %>
+			</form>

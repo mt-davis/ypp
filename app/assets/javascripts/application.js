@@ -20,5 +20,3 @@
 //= require js/icheck
 //= require turbolinks
 //= require_tree .
-
-
