@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :eds
   resources :insurances
   resources :races
   resources :employments
