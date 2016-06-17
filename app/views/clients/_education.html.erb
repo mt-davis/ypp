@@ -14,6 +14,8 @@
                   <div class="tab-pane active" id="tab_1-1">
                    <b><%= f.label :ed_id, "School" %></b>
 								    <%= f.collection_select :ed_id, Ed.all, :id, :school, {prompt: "Choose School"}, class: "btn btn-info", class: "pure-input-4-24" %>
+								    <%= f.label :grade_id, "Grade" %></b>
+								    <%= f.collection_select :grade_id, Grade.all, :id, :number, {prompt: "Choose Grade"}, class: "btn btn-info", class: "pure-input-4-24" %>
                   </div><!-- /.tab-pane -->
                   <div class="tab-pane" id="tab_2-2">
                     <div class="tab-content">

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160616153919) do
+ActiveRecord::Schema.define(version: 20160617144614) do
 
   create_table "clients", force: :cascade do |t|
     t.string   "firstName"
@@ -35,19 +35,11 @@ ActiveRecord::Schema.define(version: 20160616153919) do
     t.integer  "insurance_id"
     t.string   "image"
     t.integer  "ed_id"
-  end
-
-  create_table "cnotes", force: :cascade do |t|
-    t.text     "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
-    t.integer  "client_id"
+    t.integer  "grade_id"
   end
 
   create_table "eds", force: :cascade do |t|
     t.string   "school"
-    t.string   "grade"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -60,6 +52,12 @@ ActiveRecord::Schema.define(version: 20160616153919) do
 
   create_table "genders", force: :cascade do |t|
     t.string   "gender"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "grades", force: :cascade do |t|
+    t.string   "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
