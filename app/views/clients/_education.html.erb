@@ -19,7 +19,7 @@
                 <%= f.collection_select :ed_id, Ed.all, :id, :school, {prompt: "Choose School"}, class: "btn btn-info", class: "pure-u-23-24" %>
             </div>
 
-            <div class="pure-u-1 pure-u-md-1-4">
+            <div class="pure-u-1 pure-u-md-2-5">
                 <label for="grade"><%= f.label :grade_id, "Grade" %></label>
                 <%= f.collection_select :grade_id, Grade.all, :id, :number, {prompt: "Choose Grade"}, class: "btn btn-info", class: "pure-u-23-24" %>
             </div>

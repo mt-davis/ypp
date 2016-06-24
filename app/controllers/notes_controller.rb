@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
   before_action :set_client
+  before_action :check_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!
 
   # GET /notes
@@ -69,6 +70,17 @@ class NotesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_client
       @client = Client.find(params[:client_id])
+    end
+    
+    # Use callbacks to share common setup or constraints between actions.
+    def set_note
+      @note = Note.find(params[:id])
+    end
+    
+    def check_user
+      unless (@note.user == current_user) || (current_user.admin?)
+        redirect_to root_url, alert: "Sorry, this not belongs to someone else"
+      end
     end
     
    # def set_client
