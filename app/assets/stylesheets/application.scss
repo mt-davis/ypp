@@ -30,6 +30,15 @@
 	padding-left: 50px;
 }
 
+.pure-form .pure-input-1 {
+    width: 90% !Important;
+}
+
+.pure-form select {
+    height: 2.30em !Important;
+}
+
+
 .btn-info {
     
     background-color: #0078E7 !Important;
@@ -93,9 +102,5 @@ fieldset {
 	margin-bottom: 12px;
 	overflow: hidden;
 	padding: 0 10px;
-}
-
-.nav-tabs-custom > .tab-content {
-    padding: 50px;
 }
 /*end of custom css for client form*/

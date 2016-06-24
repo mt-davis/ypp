@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Wks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wks.each do |wk| %>
+      <tr>
+        <td><%= wk.name %></td>
+        <td><%= link_to 'Show', wk %></td>
+        <td><%= link_to 'Edit', edit_wk_path(wk) %></td>
+        <td><%= link_to 'Destroy', wk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wk', new_wk_path %>

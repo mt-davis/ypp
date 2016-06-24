@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :wks
+  resources :grads
   resources :grades
   resources :eds
   resources :insurances

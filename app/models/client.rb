@@ -10,6 +10,8 @@ class Client < ActiveRecord::Base
     belongs_to :insurance
     belongs_to :ed
     belongs_to :grade
+    belongs_to :grad
+    belongs_to :wk
     
     validates :firstName, :lastName, presence: true
     validates :phone, format: { with: /\A\(\d{3}\) \d{3}-\d{4}\z/,
