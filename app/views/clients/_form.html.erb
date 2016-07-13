@@ -26,45 +26,45 @@
                         </div>
 
                         <div class="pure-u-1 pure-u-md-1-3 firstname">
-                            <%= f.label:firstName, "First Name" %>
+                            <label for="first-name"><%= f.label:firstName, "First Name" %></label>
                             <%= f.text_field :firstName, class:"pure-u-2-5", type:"text", placeholder: "First Name",  required: true %>
                         
-                             <%= f.label :lastName, "Last Name" %>
+                             <label for="first-name"><%= f.label :lastName, "Last Name" %></label>
                              <%= f.text_field :lastName, class:"pure-u-2-5", type:"text", placeholder: "Last Name" %>
                             </div>
                             <div class="pure-u-1 pure-u-md-1-3 email">
-                                <%= f.label :email, "Email" %>
+                                <label for="email"><%= f.label :email, "Email" %></label>
                                 <%= f.text_field :email, class:"pure-u-3-5", type:"text", placeholder: "example@example.com" %>
 
-                                <%= f.label :phone, "Phone" %>
+                                <label for="phone"><%= f.label :phone, "Phone" %></label>
                                 <%= f.text_field :phone, placeholder: "123 456-7890" %>
                             </div>
                             <div class="pure-u-1 pure-u-md-1-3 gender">
-                                <%= f.label :gender_id, "Gender" %>
+                                <label for="gender"><%= f.label :gender_id, "Gender" %></label>
                                 <%= f.collection_select :gender_id, Gender.all, :id, :gender, {prompt: "Choose a Gender"}, class: "btn btn-info", class: "pure-input-4-24" %>
                             </div>
                             <div class="pure-u-1 pure-u-md-1-3 gender">
-                                <%= f.label :race_id, "Race" %>
+                                <label for="race"><%= f.label :race_id, "Race" %></label>
                                 <%= f.collection_select :race_id, Race.all, :id, :name, {prompt: "Choose a Race"}, class: "btn btn-info", class: "pure-input-4-24" %>
                             </div>
                             <div class="pure-u-1 pure-u-md-1-3 dob">
-                                <%= f.label :dob, "Date of Birth" %>
+                                <label for="dob"><%= f.label :dob, "Date of Birth" %></label>
                                 <%= f.date_field :dob, class:"fa fa-calendar" %>
                             </div>
                             <div class="pure-u-1 pure-u-md-1-3 address">
-                                <%= f.label :address, "Address" %>
+                                <label for="address"><%= f.label :address, "Address" %></label>
                                 <%= f.text_field :address, placeholder: "Address" %>
                             </div>
                             <div class="pure-u-1 pure-u-md-1-3 city">
-                                <%= f.label :city, "City" %>
+                                <label for="city"><%= f.label :city, "City" %></label>
                                 <%= f.text_field :city, placeholder: "City" %>
                             </div>
                             <div class="pure-u-1 pure-u-md-1-3 state">
-                                <%= f.label :state_id, "State" %>
+                                <label for="state"><%= f.label :state_id, "State" %></label>
                                 <%= f.collection_select :state_id, State.all, :id, :name, {prompt: "Choose State"}, class: "btn btn-info", class: "pure-input-4-24" %>
                             </div>
                             <div class="pure-u-1 pure-u-md-1-3 zipcode">
-                                <%= f.label :zipcode, "Zipcode" %>
+                                <label for="zipcode"><%= f.label :zipcode, "Zipcode" %></label>
                                 <%= f.text_field :zipcode, class: "form-control", class:"pure-u-5-24", type:"text", placeholder: "Zipcode" %>
                             </div>
                     </div>
@@ -81,12 +81,12 @@
                     <div class="pure-g">
                         <div class="pure-u-1 pure-u-md-1-3">
                             <!--<legend>Referral / Insurance Information</legend> -->
-                            <%= f.label :rsource_id, "Resource" %>
+                            <label for="resource"><%= f.label :rsource_id, "Resource" %></label>
                             <%= f.collection_select :rsource_id, Rsource.all, :id, :name, {prompt: "Choose a Resource"}, class: "btn btn-info", class: "pure-input-4-24" %>
                              </div>
                         
                             <div class="pure-u-1 pure-u-md-1-3">
-                            <%= f.label :insurance_id, "Insruance" %>
+                            <label for="insurance"><%= f.label :insurance_id, "Insruance" %></label>
                             <%= f.collection_select :insurance_id, Insurance.all, :id, :name, {prompt: "Choose Insurance"}, class: "btn btn-info", class: "pure-input-4-24" %>
                         </div>
                         </div>
