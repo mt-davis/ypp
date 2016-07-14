@@ -12,8 +12,11 @@ class Client < ActiveRecord::Base
     belongs_to :grade
     #belongs_to :grad
     belongs_to :wk
+    has_and_belongs_to_many :rhealths
     
     validates :firstName, :lastName, presence: true
     validates :phone, format: { with: /\A\(\d{3}\) \d{3}-\d{4}\z/,
     message: "must be in the format (123) 456-7890" }
 end
+
+

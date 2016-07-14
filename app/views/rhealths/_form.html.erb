@@ -1,0 +1,21 @@
+<%= form_for(@rhealth) do |f| %>
+  <% if @rhealth.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rhealth.errors.count, "error") %> prohibited this rhealth from being saved:</h2>
+
+      <ul>
+      <% @rhealth.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

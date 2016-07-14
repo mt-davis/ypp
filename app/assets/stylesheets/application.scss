@@ -104,3 +104,14 @@ fieldset {
 	padding: 0 10px;
 }
 /*end of custom css for client form*/
+
+/*Rhealth Tab*/
+
+.pure-form-aligned .pure-control-group label {
+    text-align: left !Important;
+    width: initial !Important;
+}
+
+.rh-input {
+	vertical-align: inherit !Important;
+}

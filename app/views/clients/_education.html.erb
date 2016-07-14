@@ -1,92 +1,87 @@
 <div>
 
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#education" aria-controls="education" role="tab" data-toggle="tab">Education</a></li>
-    <li role="presentation"><a href="#employment" aria-controls="employment" role="tab" data-toggle="tab">Employment</a></li>
-    <li role="presentation"><a href="#reproductiveHealth" aria-controls="messages" role="tab" data-toggle="tab">Reproductive Health</a></li>
-    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-  </ul>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#education" aria-controls="education" role="tab" data-toggle="tab">Education</a>
+        </li>
+        <li role="presentation"><a href="#employment" aria-controls="employment" role="tab" data-toggle="tab">Employment</a>
+        </li>
+        <li role="presentation"><a href="#reproductiveHealth" aria-controls="messages" role="tab" data-toggle="tab">Reproductive Health</a>
+        </li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a>
+        </li>
+    </ul>
 
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="education">
-    <fieldset>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="education">
+            <fieldset>
 
-        <div class="pure-form pure-form-stacked">
-            <div class="pure-u-1 pure-u-md-2-5">
-                <label for="school"><%= f.label :ed_id, "School" %></label>
-                <%= f.collection_select :ed_id, Ed.all, :id, :school, {prompt: "Choose School"}, class: "btn btn-info", class: "pure-u-23-24" %>
-            </div>
+                <div class="pure-form pure-form-stacked">
+                    <div class="pure-u-1 pure-u-md-2-5">
+                        <label for="school">
+                            <%=f .label :ed_id, "School" %>
+                        </label>
+                        <%=f .collection_select :ed_id, Ed.all, :id, :school, {prompt: "Choose School"}, class: "btn btn-info", class: "pure-u-23-24" %>
+                    </div>
 
-            <div class="pure-u-1 pure-u-md-2-5">
-                <label for="grade"><%= f.label :grade_id, "Grade" %></label>
-                <%= f.collection_select :grade_id, Grade.all, :id, :number, {prompt: "Choose Grade"}, class: "btn btn-info", class: "pure-u-23-24" %>
-            </div>
+                    <div class="pure-u-1 pure-u-md-2-5">
+                        <label for="grade">
+                            <%=f .label :grade_id, "Grade" %>
+                        </label>
+                        <%=f .collection_select :grade_id, Grade.all, :id, :number, {prompt: "Choose Grade"}, class: "btn btn-info", class: "pure-u-23-24" %>
+                    </div>
 
-            <div class="pure-u-1 pure-u-md-2-5">
-                <label for="grad">Graduated Date</label>
-                
-            </div>
+                    <div class="pure-u-1 pure-u-md-2-5">
+                        <label for="grad">Graduated Date</label>
+
+                    </div>
+                </div>
+            </fieldset>
         </div>
-    </fieldset>
+        <div role="tabpanel" class="tab-pane" id="employment">
+            <label for="grade">
+                <%=f .label :employment_id, "Employment" %>
+            </label>
+            <%=f .collection_select :employment_id, Employment.all, :id, :name, {prompt: "Employment Status"}, class: "btn btn-info", class: "pure-input-24-24" %>
+
+                <div class="pure-u-1 pure-u-md-1-3">
+                    <label for="wk">
+                        <%=f .label :wk_id, "Working Where?" %>
+                    </label>
+                    <%=f .text_area :wk_id, cols: "20", rows: "1" %>
+                </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="reproductiveHealth">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="pure-form pure-form-aligned">
+                            <%=f .collection_check_boxes :rhealth_ids, Rhealth.all, :id, :name do |b| %>
+                                <div class="pure-control-group">
+                                    <%=b .check_box %>
+                                        <%=b .label %>
+                                </div>
+                                <% end %>
+                        </div>
+                        <!-- End of grid -->
+
+                    </div>
+                    <!-- End of reproductiveHealth -->
+
+                    <div class="col-md-6">
+                        <!-- secnod row -->
+                        ...
+                    </div>
+                </div>
+            </div>
+            <!-- End of grid -->
+        </div>
+        <!-- End of reproductiveHealth -->
+
+        <div role="tabpanel" class="tab-pane" id="settings">
+            ...
+        </div>
     </div>
-    <div role="tabpanel" class="tab-pane" id="employment">
-      <label for="grade"><%= f.label :employment_id, "Employment" %></label>
-      <%= f.collection_select :employment_id, Employment.all, :id, :name, {prompt: "Employment Status"}, class: "btn btn-info", class: "pure-input-24-24" %>
-    
-      <div class="pure-u-1 pure-u-md-1-3">
-        <label for="wk"><%= f.label :wk_id, "Working Where?" %></label>
-      <%= f.text_area :wk_id, cols: "20", rows: "1" %>
-      </div>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="reproductiveHealth">
-      <div class="container">
-        <div class="row">
-      <div class="col-md-6">
-      <label for="rh1" class="pure-checkbox">
-            <input id="rh1" type="checkbox"> Sexually Active
-        </label>
-        <label for="rh2" class="pure-checkbox">
-            <input id="rh2" type="checkbox"> Using Contraception
-        </label>
-        <label for="rh3" class="pure-checkbox">
-            <input id="rh3" type="checkbox"> Depo-Provera
-        </label>
-        <label for="rh4" class="pure-checkbox">
-            <input id="rh4" type="checkbox"> Diaphragm
-        </label>
-        <label for="rh5" class="pure-checkbox">
-            <input id="rh5" type="checkbox"> Foam/Cream/Jelly
-        </label>
-      </div>
-      <div class="col-md-6"> <!-- secnod row -->
-        <label for="rh6" class="pure-checkbox">
-            <input id="rh6" type="checkbox"> IUD (Mirena /Sklya)
-        </label>
-        <label for="rh7" class="pure-checkbox">
-            <input id="rh7" type="checkbox"> Nuva Ring
-        </label>
-        <label for="rh8" class="pure-checkbox">
-            <input id="rh8" type="checkbox"> Pill
-        </label>
-        <label for="rh9" class="pure-checkbox">
-            <input id="rh9" type="checkbox"> Withdrawal/Pull Out
-        </label>
-        
-        <label for="rh10" class="pure-checkbox">
-            <input id="rh10" type="checkbox"> Implanon / Nexplanon
-        </label>
-        
-        <label for="rh11" class="pure-checkbox">
-            <input id="rh11" type="checkbox"> Tested postive for an STD?
-        </label>
-      </div>
-    </div>    
-    </div> <!-- End of grid -->
-    </div> <!-- End of reproductiveHealth -->
-   
-    <div role="tabpanel" class="tab-pane" id="settings">...</div>
-  </div>
 
 </div>

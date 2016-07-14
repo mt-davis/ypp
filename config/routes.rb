@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rhealths
   resources :wks
   resources :grades
   resources :eds

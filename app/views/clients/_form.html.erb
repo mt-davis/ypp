@@ -43,10 +43,14 @@
                                 <label for="gender"><%= f.label :gender_id, "Gender" %></label>
                                 <%= f.collection_select :gender_id, Gender.all, :id, :gender, {prompt: "Choose a Gender"}, class: "btn btn-info", class: "pure-input-4-24" %>
                             </div>
+                            
+                            
                             <div class="pure-u-1 pure-u-md-1-3 gender">
+                                
                                 <label for="race"><%= f.label :race_id, "Race" %></label>
                                 <%= f.collection_select :race_id, Race.all, :id, :name, {prompt: "Choose a Race"}, class: "btn btn-info", class: "pure-input-4-24" %>
                             </div>
+                          
                             <div class="pure-u-1 pure-u-md-1-3 dob">
                                 <label for="dob"><%= f.label :dob, "Date of Birth" %></label>
                                 <%= f.date_field :dob, class:"fa fa-calendar" %>
