@@ -8,7 +8,7 @@
         </li>
         <li role="presentation"><a href="#reproductiveHealth" aria-controls="messages" role="tab" data-toggle="tab">Reproductive Health</a>
         </li>
-        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a>
+        <li role="presentation"><a href="#mentalhealth" aria-controls="settings" role="tab" data-toggle="tab">Mental Health</a>
         </li>
     </ul>
 
@@ -59,8 +59,8 @@
                         <div class="pure-form pure-form-aligned">
                             <%=f .collection_check_boxes :rhealth_ids, Rhealth.all, :id, :name do |b| %>
                                 <div class="pure-control-group">
-                                    <%=b .check_box %>
-                                        <%=b .label %>
+                                    <%=b.check_box class: "rh-input" %>
+                                        <%=b.label %>
                                 </div>
                                 <% end %>
                         </div>
@@ -79,9 +79,36 @@
         </div>
         <!-- End of reproductiveHealth -->
 
-        <div role="tabpanel" class="tab-pane" id="settings">
-            ...
+        <div role="tabpanel" class="tab-pane" id="mentalhealth">
+            <h4 class="mentalhealth">Withnessed or been a victim of any of the folllowing?</h4>
+             <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="pure-form pure-form-aligned">
+                            <%=f .collection_check_boxes :mhealth_ids, Mhealth.all, :id, :name do |b| %>
+                                <div class="pure-control-group">
+                                    <%=b.check_box class: "rh-input" %>
+                                        <%=b.label %>
+                                </div>
+                                <% end %>
+                        </div>
+                        <!-- End of grid -->
+
+                    </div>
+                    <!-- End of mentalhealth -->
+
+                    <div class="col-md-6">
+                        <!-- secnod row -->
+                        <p>If so, what?</p>
+                        <textarea>
+                            
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+            <!-- End of grid -->
         </div>
+        <!-- End of Mental Health -->
     </div>
 
 </div>
