@@ -14,6 +14,7 @@ class Client < ActiveRecord::Base
     belongs_to :wk
     has_and_belongs_to_many :rhealths
     has_and_belongs_to_many :mhealths
+    has_and_belongs_to_many :dischages
     
     validates :firstName, :lastName, presence: true
     validates :phone, format: { with: /\A\(\d{3}\) \d{3}-\d{4}\z/,

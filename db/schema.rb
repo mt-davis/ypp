@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160804142649) do
+ActiveRecord::Schema.define(version: 20160804150406) do
 
   create_table "client_rh_values", force: :cascade do |t|
     t.integer  "client_id"
@@ -45,6 +45,11 @@ ActiveRecord::Schema.define(version: 20160804142649) do
     t.integer  "grade_id"
     t.text     "wk_id"
     t.date     "grad"
+  end
+
+  create_table "clients_discharges", id: false, force: :cascade do |t|
+    t.integer "discharge_id", null: false
+    t.integer "client_id",    null: false
   end
 
   create_table "clients_mhealths", id: false, force: :cascade do |t|
