@@ -10,6 +10,8 @@
         </li>
         <li role="presentation"><a href="#mentalhealth" aria-controls="settings" role="tab" data-toggle="tab">Mental Health</a>
         </li>
+        <li role="presentation"><a href="#parents" aria-controls="settings" role="tab" data-toggle="tab">Parents</a>
+        </li>
     </ul>
 
     <!-- Tab panes -->
@@ -109,6 +111,32 @@
             <!-- End of grid -->
         </div>
         <!-- End of Mental Health -->
+        <div role="tabpanel" class="tab-pane" id="parents">
+            <h3 class="parents">Current Status of Parents?</h3>
+             <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="pure-form pure-form-aligned">
+                            <%=f.collection_check_boxes :cparent_ids, Cparent.all, :id, :name do |b| %>
+                                <div class="pure-control-group">
+                                    <%=b.check_box class: "rh-input" %>
+                                        <%=b.label %>
+                                </div>
+                                <% end %>
+                        </div>
+                        <!-- End of grid -->
+
+                    </div>
+                    <!-- End of mentalhealth -->
+
+                    <div class="col-md-6">
+                        <!-- secnod row -->
+                        ...
+                    </div>
+                </div>
+            </div>
+            <!-- End of grid -->
+        </div>
     </div>
 
 </div>

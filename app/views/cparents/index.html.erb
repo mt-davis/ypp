@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cparents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cparents.each do |cparent| %>
+      <tr>
+        <td><%= cparent.name %></td>
+        <td><%= link_to 'Show', cparent %></td>
+        <td><%= link_to 'Edit', edit_cparent_path(cparent) %></td>
+        <td><%= link_to 'Destroy', cparent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cparent', new_cparent_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160804150406) do
+ActiveRecord::Schema.define(version: 20160816194213) do
 
   create_table "client_rh_values", force: :cascade do |t|
     t.integer  "client_id"
@@ -47,6 +47,11 @@ ActiveRecord::Schema.define(version: 20160804150406) do
     t.date     "grad"
   end
 
+  create_table "clients_cparents", id: false, force: :cascade do |t|
+    t.integer "cparent_id", null: false
+    t.integer "client_id",  null: false
+  end
+
   create_table "clients_discharges", id: false, force: :cascade do |t|
     t.integer "discharge_id", null: false
     t.integer "client_id",    null: false
@@ -57,9 +62,20 @@ ActiveRecord::Schema.define(version: 20160804150406) do
     t.integer "client_id",  null: false
   end
 
+  create_table "clients_pregs", id: false, force: :cascade do |t|
+    t.integer "preg_id",   null: false
+    t.integer "client_id", null: false
+  end
+
   create_table "clients_rhealths", id: false, force: :cascade do |t|
     t.integer "rhealth_id", null: false
     t.integer "client_id",  null: false
+  end
+
+  create_table "cparents", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "discharge_rs", force: :cascade do |t|
@@ -128,6 +144,12 @@ ActiveRecord::Schema.define(version: 20160804150406) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.integer  "client_id"
+  end
+
+  create_table "pregs", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "progresses", force: :cascade do |t|

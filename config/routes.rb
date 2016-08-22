@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pregs
+  resources :cparents
   resources :discharges
   resources :mhealths
   resources :rhealths
