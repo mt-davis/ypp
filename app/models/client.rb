@@ -17,6 +17,8 @@ class Client < ActiveRecord::Base
     has_and_belongs_to_many :dischages
     has_and_belongs_to_many :cparents
     has_and_belongs_to_many :pregs
+    has_and_belongs_to_many :refferals
+    
     
     validates :firstName, :lastName, presence: true
     validates :phone, format: { with: /\A\(\d{3}\) \d{3}-\d{4}\z/,

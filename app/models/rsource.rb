@@ -1,3 +1,3 @@
 class Rsource < ActiveRecord::Base
-    has_many :clents
+    has_many :clients
 end
