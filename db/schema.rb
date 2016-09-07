@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160906195137) do
+ActiveRecord::Schema.define(version: 20160907154054) do
 
   create_table "client_rh_values", force: :cascade do |t|
     t.integer  "client_id"
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20160906195137) do
     t.string   "city"
     t.string   "state"
     t.string   "zipcode"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.integer  "gender_id"
     t.date     "dob"
     t.integer  "state_id"
@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 20160906195137) do
     t.text     "wk_id"
     t.date     "grad"
     t.text     "truma_id"
+    t.string   "college_id"
+    t.boolean  "enrolled",      default: false
   end
 
   create_table "clients_cparents", id: false, force: :cascade do |t|
@@ -76,6 +78,10 @@ ActiveRecord::Schema.define(version: 20160906195137) do
   create_table "clients_rhealths", id: false, force: :cascade do |t|
     t.integer "rhealth_id", null: false
     t.integer "client_id",  null: false
+  end
+
+  create_table "colleges", force: :cascade do |t|
+    t.string "name"
   end
 
   create_table "cparents", force: :cascade do |t|
@@ -112,6 +118,10 @@ ActiveRecord::Schema.define(version: 20160906195137) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "enrolleds", force: :cascade do |t|
+    t.boolean "enroled", default: false
   end
 
   create_table "genders", force: :cascade do |t|
