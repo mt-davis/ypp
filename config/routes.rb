@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :refbs
+  resources :refas
   resources :pregs
   resources :cparents
   resources :discharges

@@ -32,8 +32,29 @@
                         </div>
     </div>
     <div role="tabpanel" class="tab-pane" id="refferal">
+      <div class="row">
+        <div class="col-md-6">
         <div class="pure-form pure-form-aligned">
-        
+                            <%= f.label "Reason for Referral?" %><br />
+                              <%= f.collection_check_boxes :refa_ids, Refa.all, :id, :name do |b| %>
+                                <div class="pure-control-group">
+                                  <%= b.check_box class: "rh-input" %>
+                                  <%= b.label %>
+                                </div>
+                              <% end %>
+        </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pure-form pure-form-aligned">
+                            <%= f.label " " %><br />
+                              <%= f.collection_check_boxes :refb_ids, Refb.all, :id, :name do |b| %>
+                                <div class="pure-control-group">
+                                  <%= b.check_box class: "rh-input" %>
+                                  <%= b.label %>
+                                </div>
+                              <% end %>
+        </div>
+        </div>
         </div>
     </div>
   </div>

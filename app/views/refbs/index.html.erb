@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Refbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @refbs.each do |refb| %>
+      <tr>
+        <td><%= refb.name %></td>
+        <td><%= link_to 'Show', refb %></td>
+        <td><%= link_to 'Edit', edit_refb_path(refb) %></td>
+        <td><%= link_to 'Destroy', refb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Refb', new_refb_path %>

@@ -20,6 +20,8 @@ class Client < ActiveRecord::Base
     has_and_belongs_to_many :cparents
     has_and_belongs_to_many :pregs
     has_and_belongs_to_many :refferals
+    has_and_belongs_to_many :refas
+    has_and_belongs_to_many :refbs
     
     
     validates :firstName, :lastName, presence: true
