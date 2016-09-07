@@ -12,6 +12,7 @@ class Client < ActiveRecord::Base
     belongs_to :grade
     #belongs_to :grad
     belongs_to :wk
+    belongs_to :truma
     has_and_belongs_to_many :rhealths
     has_and_belongs_to_many :mhealths
     has_and_belongs_to_many :dischages
