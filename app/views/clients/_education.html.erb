@@ -96,7 +96,7 @@
             <h3 class="mentalhealth">Withnessed or been a victim of any of the folllowing?</h3>
              <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <div class="pure-form pure-form-aligned">
                             <%=f .collection_check_boxes :mhealth_ids, Mhealth.all, :id, :name do |b| %>
                                 <div class="pure-control-group">
@@ -110,7 +110,7 @@
                     </div>
                     <!-- End of mentalhealth -->
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <!-- secnod row -->
                         <p>If withness to truma, what kind?</p>
                         <label for="truma">
