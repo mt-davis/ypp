@@ -119,3 +119,18 @@ fieldset {
 .mentalhealth {
 	text-align:right;
 }
+
+#college-main{
+	 width: 400px;
+    //border: 1px solid black;
+    //overflow: hidden; /* will contain if #first is longer than #second */
+}
+#college {
+	float: left;
+	//border: 1px solid red;
+}
+
+#enrolled {
+	//border: 1px solid green;
+	float: right;
+}
