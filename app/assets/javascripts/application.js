@@ -16,6 +16,4 @@
 //= require bootstrap-sprockets
 //= require jquery.slimscroll
 //= require app
-//= require js/bootstrap-switch
 //= require turbolinks
-//= require_tree .
