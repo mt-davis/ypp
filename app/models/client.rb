@@ -16,10 +16,10 @@ class Client < ActiveRecord::Base
     belongs_to :college
     has_and_belongs_to_many :rhealths
     has_and_belongs_to_many :mhealths
-    has_and_belongs_to_many :dischages
+    #has_and_belongs_to_many :dischages
     has_and_belongs_to_many :cparents
     has_and_belongs_to_many :pregs
-    has_and_belongs_to_many :refferals
+    #has_and_belongs_to_many :refferal
     has_and_belongs_to_many :refas
     has_and_belongs_to_many :refbs
     
@@ -28,5 +28,3 @@ class Client < ActiveRecord::Base
     validates :phone, format: { with: /\A\(\d{3}\) \d{3}-\d{4}\z/,
     message: "must be in the format (123) 456-7890" }
 end
-
-
