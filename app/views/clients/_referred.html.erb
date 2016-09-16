@@ -1,7 +1,7 @@
   <div>
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#resource" aria-controls="resource" role="tab" data-toggle="tab">Resource</a></li>
+    <li role="presentation" class="active"><a href="#resource" aria-controls="resource" role="tab" data-toggle="tab">Referred By</a></li>
     <li role="presentation"><a href="#insurance" aria-controls="insurance" role="tab" data-toggle="tab">Insurance</a></li>
     <li role="presentation"><a href="#referred" aria-controls="referred" role="tab" data-toggle="tab">Referred For</a></li>
     <li role="presentation"><a href="#refferal" aria-controls="refferal" role="tab" data-toggle="tab">Referrals</a></li>
@@ -10,8 +10,8 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="resource">
-         <label for="resource"><%= f.label :rsource_id, "Resource" %></label>
-            <%= f.collection_select :rsource_id, Rsource.all, :id, :name, {prompt: "Choose a Resource"}, class: "btn btn-info", class: "pure-input-4-24" %>
+         <label for="resource"><%= f.label :rsource_id, "Referred By" %></label>
+            <%= f.collection_select :rsource_id, Rsource.all, :id, :name, {prompt: "Choose a Referred By"}, class: "btn btn-info", class: "pure-input-4-24" %>
     </div>
   
     <div role="tabpanel" class="tab-pane" id="insurance">
