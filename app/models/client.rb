@@ -13,6 +13,7 @@ class Client < ActiveRecord::Base
     belongs_to :cigarette
     belongs_to :alcohol
     belongs_to :mj
+    belongs_to :od
     #belongs_to :grad
     belongs_to :wk
     belongs_to :truma

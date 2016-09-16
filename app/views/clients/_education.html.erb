@@ -106,6 +106,39 @@
                         <%= f.collection_select :mj_id, Mj.all, :id, :name, {prompt: "Select"}, class: "btn btn-info", class: "pure-input-4-24" %>
                     </div>
                     </div>
+                    <!-- second row -->
+                     <div class="subtance">
+                    <div class="mhealth">
+                        <label for="od"><%= f.label :od_id, "Other Drugs" %></label>
+                        <%= f.collection_select :od_id, Cigarette.all, :id, :name, {prompt: "Select"}, class: "btn btn-info", class: "pure-input-4-24" %>
+                    </div>
+                    <div class="mhealth">
+                        <label for="otc"><%= f.label :otc_id, "OTC, Prescibed, Street?" %></label>
+                        <%= f.collection_select :otc_id, Otc.all, :id, :name, {prompt: "Select"}, class: "btn btn-info", class: "pure-input-4-24" %>
+                    </div>
+                    </div>
+                    <!-- end of row -->
+                    <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                     <div class="pure-form pure-form-aligned">
+                                <h3>Withnessed or been a victim of any of the folllowing?</h3>
+                                <%=f .collection_check_boxes :mhealth_ids, Mhealth.all, :id, :name do |b| %>
+                                    <div class="pure-control-group">
+                                        <%=b.check_box class: "rh-input" %>
+                                            <%=b.label %>
+                                    </div>
+                                    <% end %>
+                                    <div class"container">
+                                        <p>If withness to truma, what kind?</p>
+                            <label for="truma">
+                            </label>
+                            <%=f .text_area :truma_id, cols: "20", rows: "1" %> 
+                                    </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
                   </div>
                   </div>
                 </div>

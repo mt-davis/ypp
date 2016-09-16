@@ -58,7 +58,9 @@
 
 
 
-<%= link_to "Write a note", new_client_note_path(@client), class: "btn btn-primary" %>
+<p><%= link_to "Write a note", new_client_note_path(@client), class: "btn btn-primary" %></p>
+<%= link_to 'Edit Client', edit_client_path(@client), class: "btn btn-primary" %>
+<%= link_to 'Back', clients_path, class: "btn btn-warning" %>
 
   </div>
    <div class="col-md-9">
@@ -92,7 +94,7 @@
                     <%= link_to "Delete Note", client_note_path(@client, note), method: :delete %>
                     <% else %>
                     <% if (note.user == current_user) %> 
-                    <%= link_to "Edit Client", edit_client_note_path(@client, note) %>
+                    <%= link_to "Edit Note", edit_client_note_path(@client, note) %>
                   <% end %>
                 <% end %>
                 <% end %>
@@ -107,9 +109,6 @@
 
 <br>
 <br>
-
-<%= link_to 'Edit Client', edit_client_path(@client), class: "btn btn-primary" %>
-<%= link_to 'Back', clients_path, class: "btn btn-warning" %>
 </div>
 </div>
 </div>

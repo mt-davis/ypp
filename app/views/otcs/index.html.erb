@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Otcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @otcs.each do |otc| %>
+      <tr>
+        <td><%= otc.name %></td>
+        <td><%= link_to 'Show', otc %></td>
+        <td><%= link_to 'Edit', edit_otc_path(otc) %></td>
+        <td><%= link_to 'Destroy', otc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Otc', new_otc_path %>

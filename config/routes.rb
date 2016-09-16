@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :otcs
+  resources :ods
   resources :mjs
   resources :alcohols
   resources :cigarettes
