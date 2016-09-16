@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   resources :notes
   resources :genders
   get 'home/index'
+  get 'testp/test'
 
    # devise_for :users do
   #    get '/users/sign_out' => 'devise/sessions#destroy'
