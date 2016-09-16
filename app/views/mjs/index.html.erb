@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Mjs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mjs.each do |mj| %>
+      <tr>
+        <td><%= mj.name %></td>
+        <td><%= link_to 'Show', mj %></td>
+        <td><%= link_to 'Edit', edit_mj_path(mj) %></td>
+        <td><%= link_to 'Destroy', mj, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mj', new_mj_path %>

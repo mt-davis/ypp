@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :mjs
   resources :alcohols
   resources :cigarettes
   resources :refbs
