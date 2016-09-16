@@ -88,32 +88,29 @@
             </div>
             <!-- End of reproductiveHealth -->
             <div role="tabpanel" class="tab-pane" id="mentalhealth">
-                <h3 class="mentalhealth">Withnessed or been a victim of any of the folllowing?</h3>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="pure-form pure-form-aligned">
-                                <%=f .collection_check_boxes :mhealth_ids, Mhealth.all, :id, :name do |b| %>
-                                    <div class="pure-control-group">
-                                        <%=b.check_box class: "rh-input" %>
-                                            <%=b.label %>
-                                    </div>
-                                    <% end %>
-                            </div>
-                            <!-- End of grid -->
-                        </div>
-                        <!-- End of mentalhealth -->
-                        <div class="col-md-4">
-                            <!-- secnod row -->
-                            <p>If withness to truma, what kind?</p>
-                            <label for="truma">
-                            </label>
-                            <%=f .text_area :truma_id, cols: "20", rows: "1" %>
-                        </div>
+                <div class="container-fluid">
+                  <div class="row">
+                  <div class="col-md-12">
+                      <div "container">
+                     <div class="subtance">
+                    <div class="mhealth">
+                        <label for="cigarette"><%= f.label :cigarette_id, "Smoked?" %></label>
+                        <%= f.collection_select :cigarette_id, Cigarette.all, :id, :name, {prompt: "Select"}, class: "btn btn-info", class: "pure-input-4-24" %>
                     </div>
+                    <div class="mhealth">
+                        <label for="alcohol"><%= f.label :alcohol_id, "Alcohol?" %></label>
+                        <%= f.collection_select :alcohol_id, Alcohol.all, :id, :name, {prompt: "Select"}, class: "btn btn-info", class: "pure-input-4-24" %>
+                    </div>
+                    <div class="mhealth">
+                        <label for="race"><%= f.label :cigarette_id, "Marijuana?" %></label>
+                        <%= f.collection_select :cigarette_id, Cigarette.all, :id, :name, {prompt: "Select"}, class: "btn btn-info", class: "pure-input-4-24" %>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
                 </div>
-                <!-- End of grid -->
             </div>
+            </div> 
             <!-- End of Mental Health -->
             <div role="tabpanel" class="tab-pane" id="parents">
                 <h3 class="parents">Current Status of Parents?</h3>

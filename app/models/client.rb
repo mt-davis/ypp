@@ -10,6 +10,8 @@ class Client < ActiveRecord::Base
     belongs_to :insurance
     belongs_to :ed
     belongs_to :grade
+    belongs_to :cigarette
+    belongs_to :alcohol
     #belongs_to :grad
     belongs_to :wk
     belongs_to :truma

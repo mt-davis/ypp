@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160907190446) do
+ActiveRecord::Schema.define(version: 20160916135649) do
+
+  create_table "alcohols", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cigarettes", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "client_rh_values", force: :cascade do |t|
     t.integer  "client_id"
@@ -48,6 +60,8 @@ ActiveRecord::Schema.define(version: 20160907190446) do
     t.text     "truma_id"
     t.string   "college_id"
     t.boolean  "enrolled",      default: false
+    t.integer  "cigarette_id"
+    t.integer  "alcohol_id"
   end
 
   create_table "clients_cparents", id: false, force: :cascade do |t|
