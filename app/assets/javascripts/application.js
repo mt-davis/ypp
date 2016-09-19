@@ -17,3 +17,4 @@
 //= require jquery.slimscroll
 //= require app
 //= require turbolinks
+//= require_tree .

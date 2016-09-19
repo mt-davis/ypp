@@ -41,7 +41,7 @@
                             </div>
                             <div class="pure-u-1 pure-u-md-1-3 gender">
                                 <label for="gender"><%= f.label :gender_id, "Gender" %></label>
-                                <%= f.collection_select :gender_id, Gender.all, :id, :gender, {prompt: "Choose a Gender"}, class: "btn btn-info", class: "pure-input-4-24" %>
+                                <%= f.collection_select :gender_id, Gender.all, :id, :name, {prompt: "Choose a Gender"}, class: "btn btn-info", class: "pure-input-4-24" %>
                             </div>
                             
                             

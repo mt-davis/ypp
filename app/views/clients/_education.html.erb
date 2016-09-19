@@ -22,13 +22,13 @@
 							<label for="school">
 								<%=f .label :ed_id, "School" %>
 							</label>
-							<%=f .collection_select :ed_id, Ed.all, :id, :school, {prompt: "Choose School"}, class: "btn btn-info", class: "pure-u-23-24" %>
+							<%=f .collection_select :ed_id, Ed.all, :id, :name, {prompt: "Choose School"}, class: "btn btn-info", class: "pure-u-23-24" %>
 						</div>
 						<div class="pure-u-1 pure-u-md-1-3">
 							<label for="grade">
 								<%=f .label :grade_id, "Grade" %>
 							</label>
-							<%=f .collection_select :grade_id, Grade.all, :id, :number, {prompt: "Choose Grade"}, class: "btn btn-info", class: "pure-u-23-24" %>
+							<%=f .collection_select :grade_id, Grade.all, :id, :name, {prompt: "Choose Grade"}, class: "btn btn-info", class: "pure-u-23-24" %>
 						</div>
 						<div class="pure-u-1 pure-u-md-1-3">
 							<label for="college"></label>
@@ -183,7 +183,7 @@
 					<!-- End of mentalhealth -->
 					<div class="col-md-6">
 						<!-- secnod row -->
-						....
+						...
 					</div>
 				</div>
 			</div>
