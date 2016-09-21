@@ -43,16 +43,14 @@
 
 						<div class="pure-u-1 pure-u-md-1-3">
 							<label>
-								<%=f .label :enrolled, "Enrolled in College?" %>
+							<%=f .check_box :enrolled %> Enrolled in College?
 							</label>
-							<%=f .check_box :enrolled %>
 						</div>
 
 						<div class="pure-u-1 pure-u-md-1-3">
 							<label>
-								<%=f .label :ged, "Working on GED?" %>
+								<%=f .check_box :ged_id %> Working in GED?
 							</label>
-							<%=f .check_box :ged_id %>
 						</div>
 
 
@@ -100,6 +98,12 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
+					<div class="mhealthsub">
+						<label>
+							<%= f.check_box :mhealth_sub_id %> Client concerned that they may have a problem with any of any substances?
+						</label>
+						</br>
+						</div>
 						<div "container">
 							<div class="subtance">
 								<div class="mhealth">

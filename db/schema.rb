@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160919154324) do
+ActiveRecord::Schema.define(version: 20160921222217) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -65,41 +65,8 @@ ActiveRecord::Schema.define(version: 20160919154324) do
     t.datetime "updated_at",   null: false
   end
 
-  create_table "clients", force: :cascade do |t|
-    t.string   "firstName"
-    t.string   "lastName"
-    t.string   "email"
-    t.string   "phone"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zipcode"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.integer  "gender_id"
-    t.date     "dob"
-    t.integer  "state_id"
-    t.integer  "rsource_id"
-    t.integer  "cnote_id"
-    t.text     "comments"
-    t.integer  "employment_id"
-    t.integer  "race_id"
-    t.integer  "insurance_id"
-    t.string   "image"
-    t.integer  "ed_id"
-    t.integer  "grade_id"
-    t.text     "wk_id"
-    t.date     "grad"
-    t.text     "truma_id"
-    t.string   "college_id"
-    t.boolean  "enrolled",      default: false
-    t.integer  "cigarette_id"
-    t.integer  "alcohol_id"
-    t.integer  "mj_id"
-    t.integer  "od_id"
-    t.integer  "otc_id"
-    t.boolean  "ged_id",        default: false
-  end
+# Could not dump table "clients" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "clients_cparents", id: false, force: :cascade do |t|
     t.integer "cparent_id", null: false
@@ -213,10 +180,18 @@ ActiveRecord::Schema.define(version: 20160919154324) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "mhealth_subs", force: :cascade do |t|
+    t.boolean "name", default: false
+  end
+
   create_table "mhealths", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "mheath_subs", force: :cascade do |t|
+    t.boolean "name", default: false
   end
 
   create_table "mjs", force: :cascade do |t|
