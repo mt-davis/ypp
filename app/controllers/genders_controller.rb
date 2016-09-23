@@ -69,6 +69,6 @@ class GendersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gender_params
-      params.require(:gender).permit(:gender)
+      params.require(:gender).permit(:name)
     end
 end

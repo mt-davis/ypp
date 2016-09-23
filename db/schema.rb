@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160921222217) do
+ActiveRecord::Schema.define(version: 20160923134259) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -58,13 +58,6 @@ ActiveRecord::Schema.define(version: 20160921222217) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "client_rh_values", force: :cascade do |t|
-    t.integer  "client_id"
-    t.integer  "rh_option_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
 # Could not dump table "clients" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
 
@@ -98,14 +91,17 @@ ActiveRecord::Schema.define(version: 20160921222217) do
     t.integer "client_id", null: false
   end
 
-  create_table "clients_referrals", id: false, force: :cascade do |t|
-    t.integer "referral_id", null: false
-    t.integer "client_id",   null: false
-  end
-
   create_table "clients_rhealths", id: false, force: :cascade do |t|
     t.integer "rhealth_id", null: false
     t.integer "client_id",  null: false
+  end
+
+  create_table "cnotes", force: :cascade do |t|
+    t.text     "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "client_id"
   end
 
   create_table "colleges", force: :cascade do |t|
@@ -118,19 +114,7 @@ ActiveRecord::Schema.define(version: 20160921222217) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "discharge_rs", force: :cascade do |t|
-    t.string   "reason"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "discharges", force: :cascade do |t|
-    t.string   "reason"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "ds", force: :cascade do |t|
     t.string   "reason"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -138,6 +122,7 @@ ActiveRecord::Schema.define(version: 20160921222217) do
 
   create_table "eds", force: :cascade do |t|
     t.string   "name"
+    t.string   "grade"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -168,12 +153,6 @@ ActiveRecord::Schema.define(version: 20160921222217) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "grads", force: :cascade do |t|
-    t.date     "date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "insurances", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -190,14 +169,14 @@ ActiveRecord::Schema.define(version: 20160921222217) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "mheath_subs", force: :cascade do |t|
-    t.boolean "name", default: false
-  end
-
   create_table "mjs", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "msubs", force: :cascade do |t|
+    t.boolean "msub", default: false
   end
 
   create_table "notes", force: :cascade do |t|
@@ -226,13 +205,6 @@ ActiveRecord::Schema.define(version: 20160921222217) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "progresses", force: :cascade do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "races", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -251,18 +223,6 @@ ActiveRecord::Schema.define(version: 20160921222217) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "referrals", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "rh_options", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "rhealths", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -271,13 +231,6 @@ ActiveRecord::Schema.define(version: 20160921222217) do
 
   create_table "rsources", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.text     "rname"
-  end
-
-  create_table "sexes", force: :cascade do |t|
-    t.string   "gender"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

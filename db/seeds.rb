@@ -5,4 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+
+alcohol = [
+    ["Daily"],
+    ["Weekly"],
+    ["Occasionally (2-3X)"],
+    ["Once"],
+    ["Never"],
+    ["Quit"]
+]
+    
+alcohol.each do |name|
+  Alcohol.create(name: name)
+end

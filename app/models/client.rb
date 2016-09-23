@@ -15,6 +15,7 @@ class Client < ActiveRecord::Base
     belongs_to :mj
     belongs_to :od
     belongs_to :mhealth_sub
+    belongs_to :school
     #belongs_to :grad
     belongs_to :wk
     #belongs_to :truma
