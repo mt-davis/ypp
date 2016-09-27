@@ -14,6 +14,7 @@ class ClientsController < ApplicationController
   # GET /clients/1.json
   def show
   @notes = Note.where(client_id: @client.id) #Where a note belong to the current account
+  @notes = Note.all.uniq.order("created_at DESC")
   end
 
   # GET /clients/new
