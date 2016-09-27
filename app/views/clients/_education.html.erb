@@ -14,14 +14,10 @@
 	</ul>
 	<!-- Tab panes -->
 	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane active" id="employment">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-					</div>
-				
-				</div>
-			</div>
-		<div role="tabpanel" class="tab-pane active" id="employment">
 			<label for="grade">
 				<%=f .label :employment_id, "Employment" %>
 			</label>
@@ -33,6 +29,9 @@
 					<%=f .text_area :wk_id, cols: "20", rows: "1" %>
 				</div>
 		</div>
+				</div>
+			</div>
+				</div>
 		<div role="tabpanel" class="tab-pane active" id="reproductiveHealth">
 			<div class="container">
 				<div class="row">
