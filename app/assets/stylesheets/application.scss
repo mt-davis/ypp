@@ -79,6 +79,10 @@ p#notice {
 	text-transform: uppercase;
 }*/
 
+.fullname {
+    letter-spacing: normal;
+}
+
 .account {
 	background-color: #0B5586;
 	border-bottom: 1px solid #d4d4d4;
@@ -147,6 +151,22 @@ fieldset {
 legend {
     letter-spacing: normal;
 }
+
+a.collapsed {
+    letter-spacing: normal;
+}
+
+.panel-body {
+    letter-spacing: normal;
+}
+
+.panel-title > a {
+	letter-spacing: normal;
+}
+
+
+
+
 /*end of custom css for client form*/
 
 /*Rhealth Tab*/
@@ -182,3 +202,4 @@ legend {
 .subtance {
     display: flex;
 }
+
