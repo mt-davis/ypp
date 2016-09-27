@@ -5,34 +5,34 @@
 		</li> -->
 		<li role="presentation" class="active"><a href="#employment" aria-controls="employment" role="tab" data-toggle="tab">Labor</a>
 		</li>
-		<li role="presentation"><a href="#reproductiveHealth" aria-controls="messages" role="tab" data-toggle="tab">Sexual Health</a>
+		<li role="presentation"><a href="#reproductiveHealth" aria-controls="reproductiveHealt" role="tab" data-toggle="tab">Sexual Health</a>
 		</li>
-		<li role="presentation"><a href="#mentalhealth" aria-controls="settings" role="tab" data-toggle="tab">Mental Health</a>
+		<li role="presentation"><a href="#mentalhealth" aria-controls="mentalhealth" role="tab" data-toggle="tab">Mental Health</a>
 		</li>
-		<li role="presentation"><a href="#parents" aria-controls="settings" role="tab" data-toggle="tab">Parents</a>
+		<li role="presentation"><a href="#parents" aria-controls="parents" role="tab" data-toggle="tab">Parents</a>
 		</li>
 	</ul>
 	<!-- Tab panes -->
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane active" id="employment">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-			<label for="grade">
-				<%=f .label :employment_id, "Employment" %>
-			</label>
-			<%=f .collection_select :employment_id, Employment.all, :id, :name, {prompt: "Employment Status"}, class: "btn btn-info", class: "pure-input-24-24" %>
-				<div class="pure-u-1 pure-u-md-1-3">
-					<label for="wk">
-						<%=f .label :wk_id, "Working Where?" %>
-					</label>
-					<%=f .text_area :wk_id, cols: "20", rows: "1" %>
-				</div>
-		</div>
-				</div>
+					<div class="container">
+			   <div class="row">
+			      <div class="col-md-12">
+			         <label for="grade">
+			         <%=f .label :employment_id, "Employment" %>
+			         </label>
+			         <%=f .collection_select :employment_id, Employment.all, :id, :name, {prompt: "Employment Status"}, class: "btn btn-info", class: "pure-input-24-24" %>
+			         <div class="pure-u-1 pure-u-md-1-3">
+			            <label for="wk">
+			            <%=f .label :wk_id, "Working Where?" %>
+			            </label>
+			            <%=f .text_area :wk_id, cols: "20", rows: "1" %>
+			         </div>
+			      </div>
+			   </div>
 			</div>
-				</div>
-		<div role="tabpanel" class="tab-pane active" id="reproductiveHealth">
+		</div>
+		<div role="tabpanel" class="tab-pane" id="reproductiveHealth">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
