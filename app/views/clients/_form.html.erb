@@ -25,6 +25,9 @@
                             <%= f.file_field :image %>
                             <%= f.check_box :remove_image, id: "my-checkbox", :data => { :size=>'mini', 'on-color'=>'success', 'on-text'=>'Done', 'off-text'=>'Yes' } %> Remove Image?
                         </div>
+                         <div class="actions pull-right">
+                <%=f .submit class: "btn btn-primary" %>
+            </div>
                         <hr>
                         <div class="fullname">
                             <label for="fullname"><%= f.label:firstName, "First Name" %></label>
