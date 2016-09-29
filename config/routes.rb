@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_scope :user do
+    get "/sign_in" => "devise/sessions#new" # custom path to login/sign_in
+    get "/sign_up" => "devise/registrations#new", as: "new_user_registration" # custom path to sign_up/registration
+  end
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :otcs
@@ -23,11 +27,17 @@ Rails.application.routes.draw do
   resources :states
   resources :notes
   #devise_for :users
-  devise_for :users, :skip => [:registrations]
+  #devise_for :users, :skip => :registrations
+  devise_for :users, :skip => [:registrations] 
   as :user do
-    get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
-    patch'users/:id' => 'devise/registrations#update', :as => 'user_registration'
+  get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
+  put 'users' => 'devise/registrations#update', :as => 'user_registration'
   end
+  #devise_for :users, :skip => [:registrations]
+  #as :user do
+  #  get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
+  #  patch'users/:id' => 'devise/registrations#update', :as => 'user_registration'
+  #end
   resources :notes
   resources :genders
   get 'home/index'

@@ -13,8 +13,8 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
-  @notes = Note.where(client_id: @client.id) #Where a note belong to the current account
-  @notes = Note.order("created_at DESC")
+  #@notes = Note.all.uniq.order("created_at DESC")
+  @notes = Note.where(client_id: @client.id) #Where a note belong to the current user
   end
 
   # GET /clients/new

@@ -7,12 +7,15 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    # @notes = Note.order("created_at DESC")
+     #@notes = Note.order("created_at DESC")
+     #@notes = Note.all.uniq.order("created_at DESC")
   end
 
   # GET /notes/1
   # GET /notes/1.json
   def show
+    #@notes = Note.order("created_at DESC")
+    #@notes = Note.all.uniq.order("created_at DESC")
   end
 
   # GET /notes/new
