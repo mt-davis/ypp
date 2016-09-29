@@ -22,16 +22,22 @@ Rails.application.routes.draw do
   resources :rsources
   resources :states
   resources :notes
-  devise_for :users
+  #devise_for :users
+  devise_for :users, :skip => [:registrations]
+  as :user do
+    get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
+    patch'users/:id' => 'devise/registrations#update', :as => 'user_registration'
+  end
   resources :notes
   resources :genders
   get 'home/index'
   get 'testp/test'
 
-   # devise_for :users do
+  
+  #devise_for :users do
   #    get '/users/sign_out' => 'devise/sessions#destroy'
   #match 'users/sign_out' => "devise/sessions#destroy"
- #end
+  #end
   
   resources :clients do
   resources :notes, except: [:show, :index]
