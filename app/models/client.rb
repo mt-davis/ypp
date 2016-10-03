@@ -14,12 +14,12 @@ class Client < ActiveRecord::Base
     belongs_to :alcohol
     belongs_to :mj
     belongs_to :od
-    belongs_to :mhealth_sub
-    belongs_to :school
+    #belongs_to :mhealth_sub
+    #belongs_to :school
     #belongs_to :grad
     belongs_to :wk
-    belongs_to :text_rs
-    belongs_to :text_id
+    #belongs_to :text_Rs
+    #belongs_to :text_id
     #belongs_to :truma
     belongs_to :college
     has_and_belongs_to_many :rhealths
