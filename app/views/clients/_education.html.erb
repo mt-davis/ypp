@@ -58,6 +58,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- Employment Tab -->
 		<div role="tabpanel" class="tab-pane" id="employment">
 					<div class="container-fluid">
 			   <div class="row">
@@ -71,11 +72,11 @@
 			            <%=f .label :wk_id, "Working Where?" %>
 			            </label>
 			            <%=f .text_area :wk_id, cols: "20", rows: "1" %>
-			        <!-- </div> -->
 			      </div>
 			   </div>
 			</div>
-		</div>
+		</div> <!-- End of Employment Tab -->
+		<!-- Repo Health Tab -->
 		<div role="tabpanel" class="tab-pane" id="reproductiveHealth">
 			<div class="container-fluid">
 				<div class="row">
@@ -98,8 +99,8 @@
 				</div>
 			</div>
 			<!-- End of grid -->
-		</div>
-		<!-- End of reproductiveHealth -->
+		</div><!-- End of reproductiveHealth -->
+		<!-- Mental Health Tab -->
 		<div role="tabpanel" class="tab-pane" id="mentalhealth">
 			<div class="container-fluid">
 				<div class="row">
@@ -107,7 +108,6 @@
 					<div class="mhealthsub">
 						<label>
 							<%= f.check_box :msub %> Are you or others concerned that you have a problem with any of the following substances?
-					
 						</label>
 						</br>
 						</div>
@@ -165,7 +165,7 @@
 														<label for="truma">
 														</label>
 														<%=f .text_area :truma_id, cols: "20", rows: "1" %>
-													</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -174,8 +174,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- End of Mental Health -->
+		</div><!-- End of Mental Health -->
 		<div role="tabpanel" class="tab-pane" id="parents">
 			<h3 class="parents">Current Status of Parents?</h3>
 			<div class="container">

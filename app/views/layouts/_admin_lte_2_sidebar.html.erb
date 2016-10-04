@@ -43,12 +43,21 @@
       </li>
       <!--<li><a href="#"><i class='fa fa-link'></i> <span>Another Link</span></a></li> -->
       <li class="treeview">
-        <a href="#"><i class='fa fa-link'></i> <span>Client Resource Tables</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <a href="#"><i class='fa fa-table'></i> <span>Client Resource Tables</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+          <li><%= link_to ' Update/Create Gender', genders_path, class: "fa fa-plus-square" %></li>
+          <li><%= link_to ' Create/Update State', states_path, class: "fa fa-plus-square" %></li>
+          <li><%= link_to ' Create/Update Race', races_path, class: "fa fa-plus-square" %></li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#"><i class='fa fa-table'></i> <span>Employment | Edu Tables</span> <i class="fa fa-angle-left pull-right"></i></a>
         <ul class="treeview-menu">
           <li><%= link_to ' Create/Update Schools', eds_path, class: "fa fa-plus-square" %></li>
           <li><%= link_to ' Create/Update Employ Status', employments_path, class: "fa fa-plus-square" %></li>
           <li><%= link_to ' Create/Update Repro Health', rhealths_path, class: "fa fa-plus-square" %></li>
           <li><%= link_to ' Create/Update Mental Health', mhealths_path, class: "fa fa-plus-square" %></li>
+          <li><%= link_to ' Create/Update Parent Status', cparents_path, class: "fa fa-plus-square" %></li>
         </ul>
       </li>
     </ul><!-- /.sidebar-menu -->

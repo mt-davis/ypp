@@ -1,73 +1,84 @@
-  <div>
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#resource" aria-controls="resource" role="tab" data-toggle="tab">Referred By</a></li>
-    <li role="presentation"><a href="#insurance" aria-controls="insurance" role="tab" data-toggle="tab">Insurance</a></li>
-    <li role="presentation"><a href="#referred" aria-controls="referred" role="tab" data-toggle="tab">Referred For</a></li>
-    <li role="presentation"><a href="#refferal" aria-controls="refferal" role="tab" data-toggle="tab">Referrals</a></li>
-  </ul>
+<div>
+	<!-- Nav tabs -->
+	<ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active"><a href="#resource" aria-controls="resource" role="tab" data-toggle="tab">Referred By</a>
+		</li>
+		<li role="presentation"><a href="#insurance" aria-controls="insurance" role="tab" data-toggle="tab">Insurance</a>
+		</li>
+		<li role="presentation"><a href="#referred" aria-controls="referred" role="tab" data-toggle="tab">Referred For</a>
+		</li>
+		<li role="presentation"><a href="#refferal" aria-controls="refferal" role="tab" data-toggle="tab">Referrals</a>
+		</li>
+	</ul>
 
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="resource">
-      <div class="pure-form pure-form-aligned">
-         <div class="pure-u-1 pure-u-md-1-3">
-         <label for="resource"><%= f.label :rsource_id, "Referred By" %></label>
-            <%= f.collection_select :rsource_id, Rsource.all, :id, :name, {prompt: "Choose a Referred By"}, class: "btn btn-info", class: "pure-input-4-24" %>
-            <div class="pure-u-1 pure-u-md-1-3">
-        <%=f .text_area :text_rs, cols: "20", rows: "1", placeholder: "Comments" %>
-        </div>
-    </div>
-     </div>
-      </div>
-  
-    <div role="tabpanel" class="tab-pane" id="insurance">
-      <div class="pure-form pure-form-aligned">
-         <div class="pure-u-1 pure-u-md-1-3">
-        <label for="insurance"><%= f.label :insurance_id, "Insruance" %></label>
-        <%= f.collection_select :insurance_id, Insurance.all, :id, :name, {prompt: "Choose Insurance"}, class: "btn btn-info", class: "pure-input-4-24" %>
-        <div class="pure-u-1 pure-u-md-1-3">
-        <%=f .text_area :text_id, cols: "20", rows: "1", placeholder: "Comments" %>
-        </div>
-        </div>
-    </div>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="referred">
-        <div class="pure-form pure-form-aligned">
-                            <%= f.label "Reason for Referral?" %><br />
-                              <%= f.collection_check_boxes :preg_ids, Preg.all, :id, :name do |b| %>
-                                <div class="pure-control-group">
-                                  <%= b.check_box class: "rh-input" %>
-                                  <%= b.label %>
-                                </div>
-                              <% end %>
-                        </div>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="refferal">
-      <div class="row">
-        <div class="col-md-6">
-        <div class="pure-form pure-form-aligned">
-                            <%= f.label "Reason for Referral?" %><br />
-                              <%= f.collection_check_boxes :refa_ids, Refa.all, :id, :name do |b| %>
-                                <div class="pure-control-group">
-                                  <%= b.check_box class: "rh-input" %>
-                                  <%= b.label %>
-                                </div>
-                              <% end %>
-        </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pure-form pure-form-aligned">
-                            <%= f.label " " %><br />
-                              <%= f.collection_check_boxes :refb_ids, Refb.all, :id, :name do |b| %>
-                                <div class="pure-control-group">
-                                  <%= b.check_box class: "rh-input" %>
-                                  <%= b.label %>
-                                </div>
-                              <% end %>
-        </div>
-        </div>
-        </div>
-    </div>
-  </div>
-  </div>
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane active" id="resource">
+			<div class="pure-form pure-form-aligned">
+				<div class="pure-u-1 pure-u-md-1-3">
+					<label for="resource">
+						<%=f .label :rsource_id, "Referred By" %>
+					</label>
+					<%=f .collection_select :rsource_id, Rsource.all, :id, :name, {prompt: "Choose a Referred By"}, class: "btn btn-info", class: "pure-input-4-24" %>
+						<div class="pure-u-1 pure-u-md-1-3">
+							<%=f .text_area :text_rs, cols: "20", rows: "1", placeholder: "Comments" %>
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<div role="tabpanel" class="tab-pane" id="insurance">
+			<div class="pure-form pure-form-aligned">
+				<div class="pure-u-1 pure-u-md-1-3">
+					<label for="insurance">
+						<%=f .label :insurance_id, "Insruance" %>
+					</label>
+					<%=f .collection_select :insurance_id, Insurance.all, :id, :name, {prompt: "Choose Insurance"}, class: "btn btn-info", class: "pure-input-4-24" %>
+						<div class="pure-u-1 pure-u-md-1-3">
+							<%=f .text_area :text_id, cols: "20", rows: "1", placeholder: "Comments" %>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div role="tabpanel" class="tab-pane" id="referred">
+			<div class="pure-form pure-form-aligned">
+				<%=f .label "Reason for Referral?" %>
+					<br />
+					<%=f .collection_check_boxes :preg_ids, Preg.all, :id, :name do |b| %>
+						<div class="pure-control-group">
+							<%=b .check_box class: "rh-input" %>
+								<%=b .label %>
+						</div>
+						<% end %>
+			</div>
+		</div>
+		<div role="tabpanel" class="tab-pane" id="refferal">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="pure-form pure-form-aligned">
+						<%=f .label "Reason for Referral?" %>
+							<br />
+							<%=f .collection_check_boxes :refa_ids, Refa.all, :id, :name do |b| %>
+								<div class="pure-control-group">
+									<%=b .check_box class: "rh-input" %>
+										<%=b .label %>
+								</div>
+								<% end %>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="pure-form pure-form-aligned">
+						<%=f .label " " %>
+							<br />
+							<%=f .collection_check_boxes :refb_ids, Refb.all, :id, :name do |b| %>
+								<div class="pure-control-group">
+									<%=b .check_box class: "rh-input" %>
+										<%=b .label %>
+								</div>
+								<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
