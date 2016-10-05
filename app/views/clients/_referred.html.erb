@@ -42,7 +42,7 @@
 		</div>
 		<div role="tabpanel" class="tab-pane" id="referred">
 			<div class="pure-form pure-form-aligned">
-				<%=f .label "Reason for Referral?" %>
+				<%=f .label "Referrals Made" %>
 					<br />
 					<%=f .collection_check_boxes :preg_ids, Preg.all, :id, :name do |b| %>
 						<div class="pure-control-group">
