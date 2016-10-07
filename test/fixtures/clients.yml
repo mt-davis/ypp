@@ -3,7 +3,7 @@
 one:
   firstName: MyString
   lastName: MyString
-  email: MyString
+  clientemail: MyString
   phone: MyString
   address: MyString
   city: MyString
@@ -13,7 +13,7 @@ one:
 two:
   firstName: MyString
   lastName: MyString
-  email: MyString
+  clientemail: MyString
   phone: MyString
   address: MyString
   city: MyString

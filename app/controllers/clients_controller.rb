@@ -77,7 +77,7 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:firstName, :lastName,:dob, :name, :gender_id, :RefbText, :text_rs, :msub, :text_id, :ged_id, :mj_id, :od_id, :otc_id, :cigarette_id, :alcohol_id, :grad, :remove_image, :rh_options, :insurance_id, :state_id, :ed_id, :wk_id, :grade_id, :rsource_id, :image, :race_id, :employment_id, :comments, :email, :phone, :truma_id, :college_id, :enrolled, :address, :city, :state, :zipcode, rhealth_ids:[], mhealth_ids:[], cparent_ids:[], preg_ids:[], referral_ids:[], refa_ids:[], refb_ids:[])
+      params.require(:client).permit(:firstName, :lastName,:dob, :name, :gender_id, :RefbText, :text_rs, :msub, :text_id, :ged_id, :mj_id, :od_id, :otc_id, :cigarette_id, :alcohol_id, :grad, :remove_image, :rh_options, :insurance_id, :state_id, :ed_id, :wk_id, :grade_id, :rsource_id, :image, :race_id, :employment_id, :comments, :clientemail, :phone, :truma_id, :college_id, :enrolled, :address, :city, :state, :zipcode, rhealth_ids:[], mhealth_ids:[], cparent_ids:[], preg_ids:[], referral_ids:[], refa_ids:[], refb_ids:[])
       #params.require(:client).permit(:name, mhealth_ids:[])
     end
   end

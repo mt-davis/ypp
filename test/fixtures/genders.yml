@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  gender: MyString
+  name: MyString
 
 two:
-  gender: MyString
+  name: MyString
