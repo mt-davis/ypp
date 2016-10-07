@@ -4,7 +4,6 @@ rvm:
   - 2.3.0
   
 script: 
-  #- RAILS_ENV=test bundle exec rake db:schema:load
-  #- bundle exec rake db:test:prepare
-  - bundle exec rspec spec
-  - heroku run bundle exec rake db:migrate
+ - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
