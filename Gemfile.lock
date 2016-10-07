@@ -24,6 +24,53 @@ GIT
     adminlte2-rails (0.0.6)
       bootstrap-sass (> 3.3)
 
+GIT
+  remote: https://github.com/rspec/rspec-core.git
+  revision: be77674f341543b683be0eec88d364f0538d94f7
+  branch: master
+  specs:
+    rspec-core (3.6.0.pre)
+      rspec-support (= 3.6.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-expectations.git
+  revision: 8343affb9b290d494a0793e894a83f77e28eff5c
+  branch: master
+  specs:
+    rspec-expectations (3.6.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.6.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-mocks.git
+  revision: 0c87b91d32f4f827d2c1953935adcfd5468263a5
+  branch: master
+  specs:
+    rspec-mocks (3.6.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.6.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-rails.git
+  revision: 0859155cfe84da572e60b5c31da636c4d0994ae3
+  branch: master
+  specs:
+    rspec-rails (3.6.0.pre)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (= 3.6.0.pre)
+      rspec-expectations (= 3.6.0.pre)
+      rspec-mocks (= 3.6.0.pre)
+      rspec-support (= 3.6.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-support.git
+  revision: 357ca45a15819b1b452e50f57f5df197710f7182
+  branch: master
+  specs:
+    rspec-support (3.6.0.pre)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -106,6 +153,7 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
     excon (0.49.0)
     execjs (2.7.0)
@@ -279,6 +327,11 @@ DEPENDENCIES
   puma
   rails (= 4.2.5)
   rails_12factor
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
   sass-rails (>= 3.2)
   sdoc (~> 0.4.0)
   spring

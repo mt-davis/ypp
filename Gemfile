@@ -54,6 +54,10 @@ group :development, :test do
   gem 'byebug'
 end
 
+#group :development, :test do
+#  gem 'rspec-rails', '~> 3.5'
+#end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -62,3 +66,6 @@ group :development do
   gem 'spring'
 end
 
+%w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+  gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
+end
