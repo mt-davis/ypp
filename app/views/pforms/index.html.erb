@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pforms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pfirstname</th>
+      <th>Plastname</th>
+      <th>Pphone</th>
+      <th>Paddress</th>
+      <th>Pcity</th>
+      <th>Psatate</th>
+      <th>Pzipcode</th>
+      <th>Pdob</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pforms.each do |pform| %>
+      <tr>
+        <td><%= pform.pFirstName %></td>
+        <td><%= pform.pLastName %></td>
+        <td><%= pform.pPhone %></td>
+        <td><%= pform.pAddress %></td>
+        <td><%= pform.pCity %></td>
+        <td><%= pform.pSatate %></td>
+        <td><%= pform.pZipcode %></td>
+        <td><%= pform.pDob %></td>
+        <td><%= link_to 'Show', pform %></td>
+        <td><%= link_to 'Edit', edit_pform_path(pform) %></td>
+        <td><%= link_to 'Destroy', pform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pform', new_pform_path %>

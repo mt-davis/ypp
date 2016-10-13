@@ -50,7 +50,9 @@ gem 'newrelic_rpm'
 gem 'activeadmin', github: 'activeadmin'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+  gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
+end
   gem 'byebug'
 end
 
@@ -64,8 +66,4 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-end
-
-%w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
-  gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
 end

@@ -1,0 +1,49 @@
+<%= form_for(@pform) do |f| %>
+  <% if @pform.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pform.errors.count, "error") %> prohibited this pform from being saved:</h2>
+
+      <ul>
+      <% @pform.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pFirstName %><br>
+    <%= f.text_field :pFirstName %>
+  </div>
+  <div class="field">
+    <%= f.label :pLastName %><br>
+    <%= f.text_field :pLastName %>
+  </div>
+  <div class="field">
+    <%= f.label :pPhone %><br>
+    <%= f.text_field :pPhone %>
+  </div>
+  <div class="field">
+    <%= f.label :pAddress %><br>
+    <%= f.text_field :pAddress %>
+  </div>
+  <div class="field">
+    <%= f.label :pCity %><br>
+    <%= f.text_field :pCity %>
+  </div>
+  <div class="field">
+    <%= f.label :pSatate %><br>
+    <%= f.text_field :pSatate %>
+  </div>
+  <div class="field">
+    <%= f.label :pZipcode %><br>
+    <%= f.text_field :pZipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :pDob %><br>
+    <%= f.date_select :pDob %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

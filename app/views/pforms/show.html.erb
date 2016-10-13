@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pfirstname:</strong>
+  <%= @pform.pFirstName %>
+</p>
+
+<p>
+  <strong>Plastname:</strong>
+  <%= @pform.pLastName %>
+</p>
+
+<p>
+  <strong>Pphone:</strong>
+  <%= @pform.pPhone %>
+</p>
+
+<p>
+  <strong>Paddress:</strong>
+  <%= @pform.pAddress %>
+</p>
+
+<p>
+  <strong>Pcity:</strong>
+  <%= @pform.pCity %>
+</p>
+
+<p>
+  <strong>Psatate:</strong>
+  <%= @pform.pSatate %>
+</p>
+
+<p>
+  <strong>Pzipcode:</strong>
+  <%= @pform.pZipcode %>
+</p>
+
+<p>
+  <strong>Pdob:</strong>
+  <%= @pform.pDob %>
+</p>
+
+<%= link_to 'Edit', edit_pform_path(@pform) %> |
+<%= link_to 'Back', pforms_path %>
