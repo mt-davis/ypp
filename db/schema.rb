@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161007133550) do
+ActiveRecord::Schema.define(version: 20161017143426) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(version: 20161007133550) do
     t.text     "text_id"
     t.text     "text_rs"
     t.text     "RefbText"
+    t.text     "JtText"
   end
 
   create_table "clients_cparents", id: false, force: :cascade do |t|
@@ -163,6 +164,7 @@ ActiveRecord::Schema.define(version: 20161007133550) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text     "school"
+    t.text     "JtText"
   end
 
   create_table "employments", force: :cascade do |t|
@@ -234,6 +236,19 @@ ActiveRecord::Schema.define(version: 20161007133550) do
 
   create_table "otcs", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pforms", force: :cascade do |t|
+    t.string   "pFirstName"
+    t.string   "pLastName"
+    t.string   "pPhone"
+    t.string   "pAddress"
+    t.string   "pCity"
+    t.string   "pSatate"
+    t.string   "pZipcode"
+    t.date     "pDob"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
